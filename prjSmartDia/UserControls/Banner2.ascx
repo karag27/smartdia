@@ -9,7 +9,7 @@
                         <a href="index.html">Home</a>
                         <a href="about-us.html">About</a>
                     </div>
-                    <h2>About Event</h2>
+                    <h2>İLETİŞİM</h2>
                 </div>
             </div>
         </div>
