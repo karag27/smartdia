@@ -9,9 +9,25 @@ public static class clsKernel
 {
     static List<clsHastalik> _Hastaliklar = new List<clsHastalik>();
     static List<clsKelime> _ElenenKelimeler = new List<clsKelime>();
-    static List<clsKelime> _EslenenKelimeler = new List<clsKelime>();
+    static List<clsEslesenKelime> _EslesenKelimeler = new List<clsEslesenKelime>();
     static string _sHastaAciklama = "";
 
+
+    public static List<clsEslesenKelime> EslenenKelimeler
+    {
+        get { return _EslesenKelimeler; }
+        set { _EslesenKelimeler = value; }
+    }
+
+
+
+    public static List<clsKelime> ElenenKelimeler
+    {
+        get { return _ElenenKelimeler; }
+        set { _ElenenKelimeler = value; }
+    }
+
+    
     public static List<clsHastalik> Hastaliklar
     {
         get { return _Hastaliklar; }
