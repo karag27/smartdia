@@ -8,9 +8,28 @@ using System.Data;
 public class clsKernel
 {
     clsDB DB = new clsDB();
-    List<clsHastalik> Hastaliklar = new List<clsHastalik>();
+    List<clsHastalik> _Hastaliklar = new List<clsHastalik>();
 
-    string sHastaAciklama = "";
+    string _sHastaAciklama = "";
+
+
+
+
+    public List<clsHastalik> Hastaliklar
+    {
+        get { return _Hastaliklar; }
+        set { _Hastaliklar = value; }
+    }
+
+    public string sHastaliklar
+    {
+        get { return _sHastaAciklama; }
+        set { _sHastaAciklama = value; }
+    }
+
+
+
+
 
     public clsKernel()
     {
