@@ -15,8 +15,8 @@ using System.Web;
         set {_sAyracListe = value; }
     }
 
-    char[] _sKirliAyrac;
-    public char[] sKirliAyrac
+    string[] _sKirliAyrac;
+    public string[] sKirliAyrac
     {
         get { return _sKirliAyrac; }
         set { _sKirliAyrac = value; }
@@ -32,23 +32,15 @@ using System.Web;
     }
 
 
-    public void EdatTemizle()
+    public void EdatTemizle(string sParagraf)
     {
-        for(int j=0;j<sCumleler.Length;j++)
+        for (int i = 0; i < sKirliAyrac.Length; i++)
         {
-            for (int i = 0; i < sKirliAyrac.Length; i++)
+            while (sParagraf.IndexOf(sKirliAyrac[i])!=-1)
             {
-                if (( sCumleler[j].IndexOf(sKirliAyrac[i]))!=-1)
+                if (sParagraf[sParagraf.IndexOf(sKirliAyrac[i])-1]==' ' && sParagraf[sParagraf.IndexOf(sKirliAyrac[i])+sKirliAyrac[i].Length ] ==' ')
                 {
-                  char[] cDonustur = sCumleler[j].ToCharArray();
-                    int deger=sCumleler[j].IndexOf(sKirliAyrac[i]);
-                    if (cDonustur[deger - 1]!=' ' && cDonustur[deger+ sKirliAyrac.Length+1] != ' ')
-                    {
-                        sCumleler[j] = sCumleler[j].Replace(sKirliAyrac[i], ' ');
-                    } 
-
-                    
-
+                    sParagraf = sParagraf.Replace(sKirliAyrac[i], " ");
                 }
 
             }
@@ -60,19 +52,16 @@ using System.Web;
 
  
 
-    public void bosluklariAl()
+    public void bosluklariAl(string sParagraf)
     {
       
-            for (int i = 0; i < sCumleler.Length; i++)
-            {
-               
 
-            while (sCumleler[i].IndexOf("  ") != -1)
+            while (sParagraf.IndexOf("  ") != -1)
             {
 
-                sCumleler[i] = sCumleler[i].Replace("  ", " ");
+            sParagraf = sParagraf.Replace("  ", " ");
             }
-        }
+        
        
     }
 
@@ -81,21 +70,18 @@ using System.Web;
 
     public string[] CumleleriAyir(string sParagraf)
     {
-
-        foreach (char  item in sKirliAyrac)
+       
+        /*foreach (char  item in sKirliAyrac)
         {
             sParagraf=sParagraf.Replace(item,' ');
 
         }
-
+        */
        
-        foreach (string item in sAyracListe)
-        {
-            sCumleler = sParagraf.Split(Convert.ToChar(item));
-        }
+  
 
-        EdatTemizle();
-        bosluklariAl();
+        EdatTemizle(sParagraf);
+        bosluklariAl(sParagraf);
         return sCumleler;
 
     }
