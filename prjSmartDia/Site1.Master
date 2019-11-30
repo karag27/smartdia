@@ -3,18 +3,13 @@
 <%@ Register Src="~/UserControls/HeaderScripts.ascx" TagPrefix="uc1" TagName="HeaderScripts" %>
 <%@ Register Src="~/UserControls/TopHeader.ascx" TagPrefix="uc1" TagName="TopHeader" %>
 <%@ Register Src="~/UserControls/TopMenu.ascx" TagPrefix="uc1" TagName="TopMenu" %>
-<%@ Register Src="~/UserControls/Banner1.ascx" TagPrefix="uc1" TagName="Banner1" %>
-<%@ Register Src="~/UserControls/Slogan.ascx" TagPrefix="uc1" TagName="Slogan" %>
-<%@ Register Src="~/UserControls/Detail1.ascx" TagPrefix="uc1" TagName="Detail1" %>
-<%@ Register Src="~/UserControls/Disease.ascx" TagPrefix="uc1" TagName="Disease" %>
+
 <%@ Register Src="~/UserControls/istatical.ascx" TagPrefix="uc1" TagName="istatical" %>
-<%@ Register Src="~/UserControls/Team.ascx" TagPrefix="uc1" TagName="Team" %>
+
 <%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 <%@ Register Src="~/UserControls/Map.ascx" TagPrefix="uc1" TagName="Map" %>
 <%@ Register Src="~/UserControls/FormContact.ascx" TagPrefix="uc1" TagName="FormContact" %>
 <%@ Register Src="~/UserControls/Banner2.ascx" TagPrefix="uc1" TagName="Banner2" %>
-
-
 
 
 <!doctype html>
@@ -27,36 +22,17 @@
 <body>
     <form id="form1" runat="server">
 
-
         <!--================ Start Header Menu Area =================-->
         <header class="header_area">
-            <uc1:TopHeader runat="server" ID="TopHeader" />
             <uc1:TopMenu runat="server" ID="TopMenu" />
         </header>
         <!--================ End Header Menu Area =================-->
 
-        <uc1:Banner1 runat="server" ID="Banner1" />
-        <uc1:Slogan runat="server" ID="Slogan" />
-
-        <uc1:Detail1 runat="server" ID="Detail1" />
-
-        <uc1:Disease runat="server" ID="Disease" />
-
-        <uc1:istatical runat="server" ID="istatical" />
-
-        <uc1:Team runat="server" ID="Team" />
-
-        <uc1:Banner2 runat="server" ID="Banner2" />
-
-        <uc1:Map runat="server" ID="Map" />
-
-        <uc1:FormContact runat="server" ID="FormContact" />
-
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
 
 
         <uc1:Footer runat="server" ID="Footer" />
-
-
 
     </form>
 </body>
