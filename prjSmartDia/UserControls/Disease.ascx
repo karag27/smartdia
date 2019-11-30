@@ -5,9 +5,8 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7">
 					<div class="main_title">
-						<h2>Medicare Popular Departments</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.</p>
+						<h2>TESPİT ETTİĞİMİZ HASTALIKLAR</h2>
+						<p>Öğrenen sistemizde sizlerle beraber daha fazla hastalık yapmaya devam edeceğiz.</p>
 					</div>
 				</div>
 			</div>
@@ -67,6 +66,10 @@
 						<h4>Böbrek taşı</h4>
 					</div>
 				</div>
+<div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department" style="box-shadow: 0 0 0px rgba(153, 153, 153, 0.1);">
+					</div>
+				</div>
                 
                 <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
@@ -100,8 +103,12 @@
 						<h4>Bel fıtığı</h4>
 					</div>
 				</div>
-				<a class="primary-btn text-uppercase" href="#">Learn More</a>
-			</div>
+                  <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department" style="box-shadow: 0 0 0px rgba(153, 153, 153, 0.1);">
+					</div>
+				</div>
+				</div>
+            <a class="primary-btn text-uppercase" href="wfDiagnosis.aspx">Tespit et</a>
 		</div>
 	</section>
 	<!--================ End Department Area =================-->
