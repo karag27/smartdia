@@ -1,4 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="wfDiagnosis.aspx.cs" Inherits="prjSmartDia.wfDiagnosis" %>
+
+<%@ Register Src="~/UserControls/BannerDiagnosis.ascx" TagPrefix="uc1" TagName="BannerDiagnosis" %>
+<%@ Register Src="~/UserControls/Diagnosis.ascx" TagPrefix="uc1" TagName="Diagnosis" %>
+<%@ Register Src="~/UserControls/BlockQuotes.ascx" TagPrefix="uc1" TagName="BlockQuotes" %>
+<%@ Register Src="~/UserControls/Diagnosisimage.ascx" TagPrefix="uc1" TagName="Diagnosisimage" %>
+
+
+
+
+
+
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    SON 18 SAAT 
+    <uc1:BannerDiagnosis runat="server" id="BannerDiagnosis" />
+    <uc1:Diagnosis runat="server" id="Diagnosis" />
+    <uc1:Diagnosisimage runat="server" id="Diagnosisimage" />
 </asp:Content>

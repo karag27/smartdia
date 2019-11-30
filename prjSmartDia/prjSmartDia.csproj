@@ -201,8 +201,13 @@
     <Content Include="js\theme.js" />
     <Content Include="UserControls\Banner1.ascx" />
     <Content Include="UserControls\Banner2.ascx" />
+    <Content Include="UserControls\BannerContent.ascx" />
+    <Content Include="UserControls\BannerDiagnosis.ascx" />
+    <Content Include="UserControls\BlockQuotes.ascx" />
     <Content Include="UserControls\Contact.ascx" />
     <Content Include="UserControls\Detail1.ascx" />
+    <Content Include="UserControls\Diagnosis.ascx" />
+    <Content Include="UserControls\Diagnosisimage.ascx" />
     <Content Include="UserControls\Disease.ascx" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\FormContact.ascx" />
@@ -279,6 +284,27 @@
     <Compile Include="UserControls\Banner2.ascx.designer.cs">
       <DependentUpon>Banner2.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BannerContent.ascx.cs">
+      <DependentUpon>BannerContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BannerContent.ascx.designer.cs">
+      <DependentUpon>BannerContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BannerDiagnosis.ascx.cs">
+      <DependentUpon>BannerDiagnosis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BannerDiagnosis.ascx.designer.cs">
+      <DependentUpon>BannerDiagnosis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BlockQuotes.ascx.cs">
+      <DependentUpon>BlockQuotes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BlockQuotes.ascx.designer.cs">
+      <DependentUpon>BlockQuotes.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Contact.ascx.cs">
       <DependentUpon>Contact.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -292,6 +318,20 @@
     </Compile>
     <Compile Include="UserControls\Detail1.ascx.designer.cs">
       <DependentUpon>Detail1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Diagnosis.ascx.cs">
+      <DependentUpon>Diagnosis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Diagnosis.ascx.designer.cs">
+      <DependentUpon>Diagnosis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Diagnosisimage.ascx.cs">
+      <DependentUpon>Diagnosisimage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Diagnosisimage.ascx.designer.cs">
+      <DependentUpon>Diagnosisimage.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Disease.ascx.cs">
       <DependentUpon>Disease.ascx</DependentUpon>

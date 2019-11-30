@@ -13,21 +13,12 @@ namespace prjSmartDia {
     public partial class WebForm2 {
         
         /// <summary>
-        /// Banner2 control.
+        /// BannerContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::prjSmartDia.UserControls.Banner2 Banner2;
-        
-        /// <summary>
-        /// Contact control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::prjSmartDia.UserControls.Contact Contact;
+        protected global::prjSmartDia.UserControls.BannerContent BannerContent;
     }
 }
