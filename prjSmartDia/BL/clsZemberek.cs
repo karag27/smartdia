@@ -127,7 +127,7 @@ public class clsZemberek
         return ekler;
     }
 
-    public List<string> GovdeGetir(string sKelime)
+    public List<string> KelimelerGetir(string sKelime)
     {
         Kok kok;
         List<Ek> ekler;
@@ -150,5 +150,10 @@ public class clsZemberek
         return sKelimeler;
     }
 
+    public List< EslesenKelimeler()
+    {
 
+
+
+    }
 }
