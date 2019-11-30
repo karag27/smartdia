@@ -67,8 +67,141 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\breadcrumb.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\about-bg.jpg" />
+    <Content Include="img\about-bg2.png" />
+    <Content Include="img\banner\banner-2.jpg" />
+    <Content Include="img\banner\banner-map.png" />
+    <Content Include="img\banner\banner.jpg" />
+    <Content Include="img\banner\home-banner.jpg" />
+    <Content Include="img\blog\add.jpg" />
+    <Content Include="img\blog\author.png" />
+    <Content Include="img\blog\c1.jpg" />
+    <Content Include="img\blog\c2.jpg" />
+    <Content Include="img\blog\c3.jpg" />
+    <Content Include="img\blog\c4.jpg" />
+    <Content Include="img\blog\c5.jpg" />
+    <Content Include="img\blog\c6.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="img\blog\causes\causes-1.jpg" />
+    <Content Include="img\blog\causes\causes-2.jpg" />
+    <Content Include="img\blog\causes\causes-3.jpg" />
+    <Content Include="img\blog\feature-img1.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="img\blog\next.jpg" />
+    <Content Include="img\blog\popular-post\post1.jpg" />
+    <Content Include="img\blog\popular-post\post2.jpg" />
+    <Content Include="img\blog\popular-post\post3.jpg" />
+    <Content Include="img\blog\popular-post\post4.jpg" />
+    <Content Include="img\blog\post-img1.jpg" />
+    <Content Include="img\blog\post-img2.jpg" />
+    <Content Include="img\blog\prev.jpg" />
+    <Content Include="img\counter-bg.jpg" />
+    <Content Include="img\department\d-icon1.png" />
+    <Content Include="img\department\d-icon2.png" />
+    <Content Include="img\department\d-icon3.png" />
+    <Content Include="img\department\d-icon4.png" />
+    <Content Include="img\department\d-icon5.png" />
+    <Content Include="img\department\d-icon6.png" />
+    <Content Include="img\elements\a.jpg" />
+    <Content Include="img\elements\a2.jpg" />
+    <Content Include="img\elements\d.jpg" />
+    <Content Include="img\elements\disabled-check.png" />
+    <Content Include="img\elements\disabled-radio.png" />
+    <Content Include="img\elements\f1.jpg" />
+    <Content Include="img\elements\f2.jpg" />
+    <Content Include="img\elements\f3.jpg" />
+    <Content Include="img\elements\f4.jpg" />
+    <Content Include="img\elements\f5.jpg" />
+    <Content Include="img\elements\f6.jpg" />
+    <Content Include="img\elements\f7.jpg" />
+    <Content Include="img\elements\f8.jpg" />
+    <Content Include="img\elements\g1.jpg" />
+    <Content Include="img\elements\g2.jpg" />
+    <Content Include="img\elements\g3.jpg" />
+    <Content Include="img\elements\g4.jpg" />
+    <Content Include="img\elements\g5.jpg" />
+    <Content Include="img\elements\g6.jpg" />
+    <Content Include="img\elements\g7.jpg" />
+    <Content Include="img\elements\g8.jpg" />
+    <Content Include="img\elements\primary-check.png" />
+    <Content Include="img\elements\primary-radio.png" />
+    <Content Include="img\elements\success-check.png" />
+    <Content Include="img\elements\success-radio.png" />
+    <Content Include="img\elements\user1.png" />
+    <Content Include="img\elements\user2.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\features\icon1.png" />
+    <Content Include="img\features\icon2.png" />
+    <Content Include="img\features\icon3.png" />
+    <Content Include="img\footer-bg.jpg" />
+    <Content Include="img\instagram\Image-01.jpg" />
+    <Content Include="img\instagram\Image-02.jpg" />
+    <Content Include="img\instagram\Image-03.jpg" />
+    <Content Include="img\instagram\Image-04.jpg" />
+    <Content Include="img\instagram\Image-05.jpg" />
+    <Content Include="img\instagram\Image-06.jpg" />
+    <Content Include="img\instagram\Image-07.jpg" />
+    <Content Include="img\instagram\Image-08.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\map-bg.png" />
+    <Content Include="img\recent-blog\blog1.jpg" />
+    <Content Include="img\recent-blog\blog2.jpg" />
+    <Content Include="img\recent-blog\blog3.jpg" />
+    <Content Include="img\team\member1.png" />
+    <Content Include="img\team\member2.png" />
+    <Content Include="img\team\member3.png" />
+    <Content Include="img\team\member4.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\gmaps.min.js" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.form.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\mail-script.js" />
+    <Content Include="js\popper.js" />
+    <Content Include="js\stellar.js" />
+    <Content Include="js\theme.js" />
+    <Content Include="vendors\animate-css\animate.css" />
+    <Content Include="vendors\animate-css\wow.min.js" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-select.css" />
+    <Content Include="vendors\bootstrap-datepicker\bootstrap-select.js" />
+    <Content Include="vendors\counter-up\jquery.counterup.js" />
+    <Content Include="vendors\counter-up\jquery.waypoints.min.js" />
+    <Content Include="vendors\flipclock\timer.js" />
+    <Content Include="vendors\isotope\imagesloaded.pkgd.min.js" />
+    <Content Include="vendors\isotope\isotope-min.js" />
+    <Content Include="vendors\jquery-ui\jquery-ui.css" />
+    <Content Include="vendors\jquery-ui\jquery-ui.js" />
+    <Content Include="vendors\lightbox\simpleLightbox.css" />
+    <Content Include="vendors\lightbox\simpleLightbox.min.js" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.svg" />
+    <Content Include="vendors\linericon\style.css" />
+    <Content Include="vendors\nice-select\css\nice-select.css" />
+    <Content Include="vendors\nice-select\css\style.css" />
+    <Content Include="vendors\nice-select\js\jquery.nice-select.js" />
+    <Content Include="vendors\nice-select\js\jquery.nice-select.min.js" />
+    <Content Include="vendors\owl-carousel\assets\ajax-loader.gif" />
+    <Content Include="vendors\owl-carousel\assets\animated.css" />
+    <Content Include="vendors\owl-carousel\assets\owl.carousel.css" />
+    <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
+    <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
+    <Content Include="wfContactUs.aspx" />
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +209,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="wfContactUs.aspx.cs">
+      <DependentUpon>wfContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfContactUs.aspx.designer.cs">
+      <DependentUpon>wfContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfHomePage.aspx.cs">
       <DependentUpon>wfHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -85,7 +231,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\style.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="img\elements\_DS_Store" />
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_banner.scss" />
+    <Content Include="scss\_blog.scss" />
+    <Content Include="scss\_button.scss" />
+    <Content Include="scss\_contact.scss" />
+    <Content Include="scss\_elements.scss" />
+    <Content Include="scss\_footer.scss" />
+    <Content Include="scss\_header.scss" />
+    <Content Include="scss\_home.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_predefine.scss" />
+    <Content Include="scss\_reset.scss" />
+    <Content Include="scss\_responsive.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.ttf" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
