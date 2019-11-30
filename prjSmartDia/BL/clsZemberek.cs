@@ -5,25 +5,45 @@ using System.Web;
 using net.zemberek.erisim;
 using net.zemberek.yapi;
 using net.zemberek.tr.yapi;
-using System.IO;
 using net.zemberek.yapi.ek;
+
 
 
 
 public class clsZemberek
     {
-    private string skelime;
+    private string sKelime;
 
-    public string  _skelime
+    public string  _Kelime
     {
-        get { return skelime; }
-        set { skelime = value; }
+        get { return sKelime; }
+        set { sKelime = value; }
+    }
+
+     Zemberek zKok = new Zemberek(new TurkiyeTurkcesi());
+    public string KokGetir(string skelime)
+    {
+        Kelime[] cozumler = zKok.kelimeCozumle(skelime);
+
+        if (cozumler.Length == 0)
+        {
+
+            return skelime;
+        }
+
+        Kelime kelime1 = cozumler[maxIndex];
+        return  kelime1.kok().icerik(); 
+
+
+
     }
 
 
-    public string KokGetir(string skelime)
+
+    Zemberek zGovde = new Zemberek(new TurkiyeTurkcesi());
+    public string GovdeGetir(string skelime)
     {
-        Kelime[] cozumler = Zemberek.kelimeCozumle(skelime);
+        Kelime[] cozumler = zGovde.kelimeCozumle(skelime);
 
         if (cozumler.Length == 0)
         {
@@ -44,7 +64,6 @@ public class clsZemberek
         }
 
         Kelime kelime1 = cozumler[maxIndex];
-        System.Console.WriteLine(cozumler[maxIndex].ToString());
 
         List<Ek> ekler = kelime1.ekler();
         List<Ek> yeni_ekler = new List<Ek>();
@@ -133,7 +152,7 @@ public class clsZemberek
 
         if (j > 0)
         {
-            kelimeson = zemberek.kelimeUret(kelime1.kok(), yeni_ekler);
+            kelimeson = zGovde.kelimeUret(kelime1.kok(), yeni_ekler);
         }
         else
         {
