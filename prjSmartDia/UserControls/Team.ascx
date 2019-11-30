@@ -5,9 +5,8 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7">
 					<div class="main_title">
-						<h2>Medicare Popular Departments</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.</p>
+						<h2>Smartdia Ekibi</h2>
+				
 					</div>
 				</div>
 			</div>
@@ -24,7 +23,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Ethel Davis</h4>
+							<h4>Cengiz SERTKAYA</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>
@@ -42,7 +41,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Rodney Cooper</h4>
+							<h4>Murat KARABULUT</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>
@@ -60,7 +59,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Dane Walker</h4>
+							<h4>İslam MAYDA</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>
@@ -78,7 +77,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Lena Keller</h4>
+							<h4>Yusuf UĞURLU</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>

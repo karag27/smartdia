@@ -148,6 +148,7 @@
     <Content Include="img\instagram\Image-06.jpg" />
     <Content Include="img\instagram\Image-07.jpg" />
     <Content Include="img\instagram\Image-08.jpg" />
+    <Content Include="img\Kulak.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\map-bg.png" />
     <Content Include="img\recent-blog\blog1.jpg" />
@@ -212,7 +213,9 @@
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
+    <Content Include="wfAbout.aspx" />
     <Content Include="wfContact.aspx" />
+    <Content Include="wfDiagnosis.aspx" />
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -325,12 +328,26 @@
     <Compile Include="UserControls\TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
     </Compile>
+    <Compile Include="wfAbout.aspx.cs">
+      <DependentUpon>wfAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfAbout.aspx.designer.cs">
+      <DependentUpon>wfAbout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="wfContact.aspx.cs">
       <DependentUpon>wfContact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="wfContact.aspx.designer.cs">
       <DependentUpon>wfContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfDiagnosis.aspx.cs">
+      <DependentUpon>wfDiagnosis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfDiagnosis.aspx.designer.cs">
+      <DependentUpon>wfDiagnosis.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfHomePage.aspx.cs">
       <DependentUpon>wfHomePage.aspx</DependentUpon>
