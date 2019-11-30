@@ -174,6 +174,9 @@
     <Content Include="js\popper.js" />
     <Content Include="js\stellar.js" />
     <Content Include="js\theme.js" />
+    <Content Include="SQLite\sqldiff.exe" />
+    <Content Include="SQLite\sqlite3.exe" />
+    <Content Include="SQLite\sqlite3_analyzer.exe" />
     <Content Include="vendors\animate-css\animate.css" />
     <Content Include="vendors\animate-css\wow.min.js" />
     <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
