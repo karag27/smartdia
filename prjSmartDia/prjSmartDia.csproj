@@ -85,6 +85,7 @@
     <Content Include="css\breadcrumb.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="dll\NZemberek.dll" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\about-bg.jpg" />
@@ -418,6 +419,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DAL\" />
     <Folder Include="dll\" />
     <Folder Include="Models\" />
   </ItemGroup>
