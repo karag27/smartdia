@@ -150,10 +150,10 @@ public class clsZemberek
         return sKelimeler;
     }
 
-    public List< EslesenKelimeler()
-    {
+    //public List< EslesenKelimeler()
+    //{
 
 
 
-    }
+    //}
 }
