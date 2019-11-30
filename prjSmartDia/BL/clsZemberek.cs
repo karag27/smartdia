@@ -7,163 +7,147 @@ using net.zemberek.yapi;
 using net.zemberek.tr.yapi;
 using net.zemberek.yapi.ek;
 
-
-
-
 public class clsZemberek
-    {
+{
+    Zemberek zZemberek = new Zemberek(new TurkiyeTurkcesi());
     private string sKelime;
 
-    public string  _Kelime
+    public string _Kelime
     {
         get { return sKelime; }
         set { sKelime = value; }
     }
 
-     Zemberek zKok = new Zemberek(new TurkiyeTurkcesi());
-    public string KokGetir(string sKelime)
+    public bool EkKontrol(Ek ek)
     {
-        Kelime[] cozumler = zKok.kelimeCozumle(sKelime);
-
-        if (cozumler.Length == 0)
-        {
-
-            return sKelime;
-        }
-
-
-        Kelime kelime1 = cozumler[0];
-        return  kelime1.kok().icerik(); 
-
-
-
-    }
-
-
-
-    Zemberek zGovde = new Zemberek(new TurkiyeTurkcesi());
-    public string GovdeGetir(string skelime)
-    {
-        Kelime[] cozumler = zGovde.kelimeCozumle(skelime);
-
-        if (cozumler.Length == 0)
-        {
-
-            return skelime;
-        }
-
-        int igUzunluk = 0;
-        int maxIndex = 0;
-        for (int i = 0; i < cozumler.Length; i++)
-        {
-            if (igUzunluk < cozumler[i].ekler().Count)
-            {
-                igUzunluk = cozumler[i].ekler().Count;
-                maxIndex = i;
-            }
-
-        }
-
-        Kelime kelime1 = cozumler[maxIndex];
-
-        List<Ek> ekler = kelime1.ekler();
-        List<Ek> yeni_ekler = new List<Ek>();
-
-        int j = 0;
-        for (int i = 0; i < ekler.Count; i++)
-        {
-
-            Boolean cekimEkiMi = false;
-
-            if (    // Cogul Ekleri -ler, -lar
-                    (Convert.ToString(ekler[i]).Contains("ISIM_COGUL_LER"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_COGUL_LAR"))
+        bool bKabul = true;
+        if (
+                    // Cogul Ekleri -ler, -lar
+                    (Convert.ToString(ek).Contains("ISIM_COGUL_LER"))
+                    || (Convert.ToString(ek).Contains("ISIM_COGUL_LAR"))
 
                     // Durum (hal) Ekleri -i, -e, -de, -den
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_BELIRTME_I"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_YONELME_E"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KALMA_DE"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_CIKMA_DEN"))
+                    || (Convert.ToString(ek).Contains("ISIM_BELIRTME_I"))
+                    || (Convert.ToString(ek).Contains("ISIM_YONELME_E"))
+                    || (Convert.ToString(ek).Contains("ISIM_KALMA_DE"))
+                    || (Convert.ToString(ek).Contains("ISIM_CIKMA_DEN"))
 
                     // Tamlama
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_TAMLAMA_"))
+                    || (Convert.ToString(ek).Contains("ISIM_TAMLAMA_"))
                     /*
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_TAMLAMA_I"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_TAMLAMA_IN"))
+                    || (Convert.ToString(ek).Contains("ISIM_TAMLAMA_I"))
+                    || (Convert.ToString(ek).Contains("ISIM_TAMLAMA_IN"))
                      */
 
                     // Iyelik -im, -in
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_"))
                     /*
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_BEN_IM"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_SEN_IN"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_O_I"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_BIZ_IMIZ"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_SIZ_INIZ"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_SAHIPLIK_ONLAR_LERI"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_BEN_IM"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_SEN_IN"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_O_I"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_BIZ_IMIZ"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_SIZ_INIZ"))
+                    || (Convert.ToString(ek).Contains("ISIM_SAHIPLIK_ONLAR_LERI"))
                      */
 
                     // Kisi
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KISI_"))
+                    || (Convert.ToString(ek).Contains("ISIM_KISI_"))
                     /*
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KISI_BEN_IM"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KISI_SEN_SIN"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KISI_BIZ_IZ"))
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_KISI_SIZ_SINIZ"))
+                    || (Convert.ToString(ek).Contains("ISIM_KISI_BEN_IM"))
+                    || (Convert.ToString(ek).Contains("ISIM_KISI_SEN_SIN"))
+                    || (Convert.ToString(ek).Contains("ISIM_KISI_BIZ_IZ"))
+                    || (Convert.ToString(ek).Contains("ISIM_KISI_SIZ_SINIZ"))
                      */
 
                     // Diger
-                    || (Convert.ToString(ekler[i]).Contains("ISIM_TANIMLAMA_DIR"))
+                    || (Convert.ToString(ek).Contains("ISIM_TANIMLAMA_DIR"))
 
                     // Fiiler icin
 
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_GECMISZAMAN_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_SIMDIKIZAMAN_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_GENISZAMAN_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_GELECEKZAMAN_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_KISI_"))
-                    //    || (Convert.ToString(ekler[i]).Contains("FIIL_OLUMSUZLUK_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_EMIR_"))
-                    //|| (Convert.ToString(ekler[i]).Contains("FIIL_DONUSUM_"))
-                    //  || (Convert.ToString(ekler[i]).Contains("ISIM_DONUSUM_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_SART_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_ISTEK_"))
-                    || (Convert.ToString(ekler[i]).Contains("IMEK_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_SUREKLILIK_"))
-                    || (Convert.ToString(ekler[i]).Contains("FIIL_ZORUNLULUK_"))
-                      || (Convert.ToString(ekler[i]).Contains("FIIL_MASTAR_"))
+                    || (Convert.ToString(ek).Contains("FIIL_GECMISZAMAN_"))
+                    || (Convert.ToString(ek).Contains("FIIL_SIMDIKIZAMAN_"))
+                    || (Convert.ToString(ek).Contains("FIIL_GENISZAMAN_"))
+                    || (Convert.ToString(ek).Contains("FIIL_GELECEKZAMAN_"))
+                    || (Convert.ToString(ek).Contains("FIIL_KISI_"))
+                    //    || (Convert.ToString(ek).Contains("FIIL_OLUMSUZLUK_"))
+                    || (Convert.ToString(ek).Contains("FIIL_EMIR_"))
+                    //|| (Convert.ToString(ek).Contains("FIIL_DONUSUM_"))
+                    //  || (Convert.ToString(ek).Contains("ISIM_DONUSUM_"))
+                    || (Convert.ToString(ek).Contains("FIIL_SART_"))
+                    || (Convert.ToString(ek).Contains("FIIL_ISTEK_"))
+                    || (Convert.ToString(ek).Contains("IMEK_"))
+                    || (Convert.ToString(ek).Contains("FIIL_SUREKLILIK_"))
+                    || (Convert.ToString(ek).Contains("FIIL_ZORUNLULUK_"))
+                      || (Convert.ToString(ek).Contains("FIIL_MASTAR_"))
                     )
-            {
+        {
 
-                cekimEkiMi = true;
-            }
-            if (cekimEkiMi)
+            bKabul = false;
+        }
+        return bKabul;
+    }
+
+    public Kelime[] Cozumle(string sKelime)
+    {       
+        Kelime[] cozumler = zZemberek.kelimeCozumle(sKelime);
+        if (cozumler.Length == 0)
+        {
+            return null;
+        }
+        return cozumler;
+    }
+
+    public List<Kok> KokGetir(string sKelime)
+    {
+        List<Kok> kokler = new List<Kok>();
+        Kelime[] cozumler = Cozumle(sKelime);
+
+        foreach (Kelime cozum in cozumler)
+        {
+            kokler.Add(cozum.kok());
+        }
+
+        return kokler;
+    }
+
+    public List<Ek> EkGetir(Kelime kKelime)
+    {
+        List<Ek> ekler = new List<Ek>();
+
+        foreach (Ek ek in kKelime.ekler())
+        {
+            if (EkKontrol(ek))
             {
-                break;
+                ekler.Add(ek);
             }
             else
-            {
+                break;
+        }
 
-                yeni_ekler.Add(ekler[i]);
-                j++;
+        return ekler;
+    }
+
+    public List<string> GovdeGetir(string sKelime)
+    {
+        Kok kok;
+        List<Ek> ekler;
+        List<string> sKelimeler = new List<string>();
+        string sYeniKelime;
+        Kelime[] cozumler = Cozumle(sKelime);
+
+        foreach (Kelime cozum in cozumler)
+        {
+            kok = cozum.kok();
+            ekler = EkGetir(cozum);
+            sKelimeler.Add(kok.icerik());
+            if (ekler.Count>0)
+            {
+                sYeniKelime = zZemberek.kelimeUret(kok, ekler);
+                sKelimeler.Add(sYeniKelime);
             }
         }
 
-        String kelimeson = "";
-
-        if (j > 0)
-        {
-            kelimeson = zGovde.kelimeUret(kelime1.kok(), yeni_ekler);
-        }
-        else
-        {
-            kelimeson = kelime1.kok().icerik();
-        }
-
-        return kelimeson;
-
-
-
+        return sKelimeler;
     }
 
 
