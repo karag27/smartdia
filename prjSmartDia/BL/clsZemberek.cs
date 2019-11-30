@@ -14,21 +14,21 @@ public class clsZemberek
     {
     private string skelime;
 
-    public string MyProperty
+    public string  _skelime
     {
         get { return skelime; }
         set { skelime = value; }
     }
 
 
-    public void KokGetir(string sKokuneAyrılacakelime)
+    public string KokGetir(string skelime)
     {
-        Kelime[] cozumler = zemberek.kelimeCozumle(input);
+        Kelime[] cozumler = Zemberek.kelimeCozumle(skelime);
 
         if (cozumler.Length == 0)
         {
 
-            return input;
+            return skelime;
         }
 
         int igUzunluk = 0;
