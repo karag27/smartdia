@@ -3,20 +3,13 @@
 <%@ Register Src="~/UserControls/HeaderScripts.ascx" TagPrefix="uc1" TagName="HeaderScripts" %>
 <%@ Register Src="~/UserControls/TopHeader.ascx" TagPrefix="uc1" TagName="TopHeader" %>
 <%@ Register Src="~/UserControls/TopMenu.ascx" TagPrefix="uc1" TagName="TopMenu" %>
-<%@ Register Src="~/UserControls/Banner1.ascx" TagPrefix="uc1" TagName="Banner1" %>
-<%@ Register Src="~/UserControls/Slogan.ascx" TagPrefix="uc1" TagName="Slogan" %>
-<%@ Register Src="~/UserControls/Detail1.ascx" TagPrefix="uc1" TagName="Detail1" %>
-<%@ Register Src="~/UserControls/Disease.ascx" TagPrefix="uc1" TagName="Disease" %>
+
 <%@ Register Src="~/UserControls/istatical.ascx" TagPrefix="uc1" TagName="istatical" %>
-<%@ Register Src="~/UserControls/Team.ascx" TagPrefix="uc1" TagName="Team" %>
 
+<%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
 
-
-
-
-
-
-
+<%@ Register Src="~/UserControls/FormContact.ascx" TagPrefix="uc1" TagName="FormContact" %>
+<%@ Register Src="~/UserControls/Banner2.ascx" TagPrefix="uc1" TagName="Banner2" %>
 
 
 <!doctype html>
@@ -24,258 +17,22 @@
 
 <html>
 <head runat="server">
-    <uc1:HeaderScripts runat="server" id="HeaderScripts" />
+    <uc1:HeaderScripts runat="server" ID="HeaderScripts" />
 </head>
 <body>
     <form id="form1" runat="server">
 
-        
-	<!--================ Start Header Menu Area =================-->
-	<header class="header_area">
-        <uc1:TopHeader runat="server" id="TopHeader" />
-        <uc1:TopMenu runat="server" id="TopMenu" />
-	</header>
-	<!--================ End Header Menu Area =================-->
+        <!--================ Start Header Menu Area =================-->
+        <header class="header_area">
+            <uc1:TopMenu runat="server" ID="TopMenu" />
+        </header>
+        <!--================ End Header Menu Area =================-->
 
-        <uc1:Banner1 runat="server" id="Banner1" />
-        <uc1:Slogan runat="server" id="Slogan" />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
 
-        <uc1:Detail1 runat="server" id="Detail1" />
 
-        <uc1:Disease runat="server" id="Disease" />
-
-        <uc1:istatical runat="server" id="istatical" />
-
-        <uc1:Team runat="server" id="Team" />
-
-	<!--================ Start Blog Area =================-->
-	<section class="section_gap blog_area">
-		<div class="container">
-			<div class="row">
-				<!-- recent blog -->
-				<div class="col-lg-6">
-					<div class="recent_blog">
-						<div class="blog_title">
-							<h2>Our Recent Blogs</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua.</p>
-						</div>
-					</div>
-					<div class="row">
-						<!-- single-blog -->
-						<div class="col-lg-12 col-sm-12">
-							<div class="single_blog">
-								<div class="row align-items-center">
-									<div class="col-lg-4 col-md-3">
-										<div class="blog_thumb">
-											<img class="img-fluid" src="img/recent-blog/blog1.jpg" alt="">
-										</div>
-									</div>
-									<div class="col-lg-8 col-md-8">
-										<div class="blog_details">
-											<div class="blog_meta">
-												<span><i class="fa fa-calendar"></i>13th Dec</span>
-												<span><i class="fa fa-heart-o"></i>15</span>
-												<span><i class="fa fa-comment-o"></i>04</span>
-											</div>
-											<h4>
-												<a href="#">Portable Fashion for women</a>
-											</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single-blog -->
-						<div class="col-lg-12 col-sm-12">
-							<div class="single_blog">
-								<div class="row align-items-center">
-									<div class="col-lg-4 col-md-3">
-										<div class="blog_thumb">
-											<img class="img-fluid" src="img/recent-blog/blog2.jpg" alt="">
-										</div>
-									</div>
-									<div class="col-lg-8 col-md-8">
-										<div class="blog_details">
-											<div class="blog_meta">
-												<span><i class="fa fa-calendar"></i>13th Dec</span>
-												<span><i class="fa fa-heart-o"></i>15</span>
-												<span><i class="fa fa-comment-o"></i>04</span>
-											</div>
-											<h4>
-												<a href="#">Portable Fashion for women</a>
-											</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single-blog -->
-						<div class="col-lg-12 col-sm-12">
-							<div class="single_blog">
-								<div class="row align-items-center">
-									<div class="col-lg-4 col-md-3">
-										<div class="blog_thumb">
-											<img class="img-fluid" src="img/recent-blog/blog3.jpg" alt="">
-										</div>
-									</div>
-									<div class="col-lg-8 col-md-8">
-										<div class="blog_details">
-											<div class="blog_meta">
-												<span><i class="fa fa-calendar"></i>13th Dec</span>
-												<span><i class="fa fa-heart-o"></i>15</span>
-												<span><i class="fa fa-comment-o"></i>04</span>
-											</div>
-											<h4>
-												<a href="#">Portable Fashion for women</a>
-											</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- appoinment area -->
-				<div class="col-lg-6">
-					<div class="recent_blog appoinment">
-						<div class="blog_title">
-							<h2>Make an Appointment</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua.</p>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="appoinment_form_section lite_bg">
-							<form class="form_area" id="myForm" action="mail.html" method="post">
-								<div class="row">
-									<div class="col-lg-12 form_group">
-										<input name="name" placeholder="Patient name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
-										 class="common_input form-control" required="" type="text">
-										<input name="email" placeholder="Email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-										 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common_input form-control"
-										 required="" type="email">
-										<input name="name" placeholder="Date of birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
-										 class="common_input form-control" required="" type="text">
-										<select class="default-select">
-											<option data-display="Doctor’s name">Doctor’s name</option>
-											<option value="1">Rashimul</option>
-											<option value="2">Shofi</option>
-										</select>
-										<input name="subject" placeholder="Appointment date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
-										 class="common_input mb-10 form-control" required="" type="text">
-
-										<textarea class="common_textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''"
-										 onblur="this.placeholder = 'Messege'" required=""></textarea>
-									</div>
-									<div class="col-lg-12 text-center">
-										<button class="primary-btn text-uppercase">confirm booking</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Blog Area =================-->
-
-	<!--================ Start footer Area  =================-->
-	<footer class="footer-area section-gap">
-		<div class="footer_top section_gap">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3  col-md-6 col-sm-6">
-						<div class="single-footer-widget">
-							<h4 class="text-white">About Us</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-								magna aliqua.
-							</p>
-						</div>
-					</div>
-					<div class="col-lg-4  col-md-6 col-sm-6">
-						<div class="single-footer-widget">
-							<h4 class="text-white">Contact Us</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-								magna aliqua.
-							</p>
-							<p class="number">
-								012-6532-568-9746 <br>
-								012-6532-569-9748
-							</p>
-						</div>
-					</div>
-					<div class="col-lg-5  col-md-6 col-sm-6">
-						<div class="single-footer-widget">
-							<h4 class="text-white">Newsletter</h4>
-							<p>You can trust us. we only send offers, not a single spam.</p>
-							<div class="d-flex flex-row" id="mc_embed_signup">
-								<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								 method="get">
-									<div class="input-group add-on">
-										<input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
-										 required="" type="email">
-										<div style="position: absolute; left: -5000px;">
-											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-										</div>
-										<div class="input-group-btn">
-											<button class="genric-btn text-uppercase">
-												get started
-											</button>
-										</div>
-									</div>
-									<div class="info mt-20"></div>
-								</form>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="d-flex justify-content-between align-items-center flex-wrap">
-					<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					<div class="footer-social d-flex align-items-center">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--================ End footer Area  =================-->
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.js"></script>
-	<script src="js/mail-script.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
+        <uc1:Footer runat="server" ID="Footer" />
 
     </form>
 </body>

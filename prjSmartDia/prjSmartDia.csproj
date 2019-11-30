@@ -169,11 +169,15 @@
     <Content Include="js\stellar.js" />
     <Content Include="js\theme.js" />
     <Content Include="UserControls\Banner1.ascx" />
+    <Content Include="UserControls\Banner2.ascx" />
+    <Content Include="UserControls\Contact.ascx" />
     <Content Include="UserControls\Detail1.ascx" />
     <Content Include="UserControls\Disease.ascx" />
     <Content Include="UserControls\Footer.ascx" />
+    <Content Include="UserControls\FormContact.ascx" />
     <Content Include="UserControls\HeaderScripts.ascx" />
     <Content Include="UserControls\istatical.ascx" />
+    <Content Include="UserControls\Map.ascx" />
     <Content Include="UserControls\Slogan.ascx" />
     <Content Include="UserControls\Team.ascx" />
     <Content Include="UserControls\TopHeader.ascx" />
@@ -208,6 +212,7 @@
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
+    <Content Include="wfContact.aspx" />
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +233,20 @@
     </Compile>
     <Compile Include="UserControls\Banner1.ascx.designer.cs">
       <DependentUpon>Banner1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Banner2.ascx.cs">
+      <DependentUpon>Banner2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Banner2.ascx.designer.cs">
+      <DependentUpon>Banner2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Contact.ascx.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Contact.ascx.designer.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Detail1.ascx.cs">
       <DependentUpon>Detail1.ascx</DependentUpon>
@@ -250,6 +269,13 @@
     <Compile Include="UserControls\Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FormContact.ascx.cs">
+      <DependentUpon>FormContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormContact.ascx.designer.cs">
+      <DependentUpon>FormContact.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HeaderScripts.ascx.cs">
       <DependentUpon>HeaderScripts.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,6 +289,13 @@
     </Compile>
     <Compile Include="UserControls\istatical.ascx.designer.cs">
       <DependentUpon>istatical.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Map.ascx.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Map.ascx.designer.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Slogan.ascx.cs">
       <DependentUpon>Slogan.ascx</DependentUpon>
@@ -291,6 +324,13 @@
     </Compile>
     <Compile Include="UserControls\TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wfContact.aspx.cs">
+      <DependentUpon>wfContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfContact.aspx.designer.cs">
+      <DependentUpon>wfContact.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfHomePage.aspx.cs">
       <DependentUpon>wfHomePage.aspx</DependentUpon>
