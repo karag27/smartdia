@@ -27,11 +27,7 @@
 							<li class="nav-item"><a class="nav-link" href="wfAbout.aspx">Hakkımızda</a></li>
 							<li class="nav-item"><a class="nav-link" href="wfContact.aspx">İletişim</a></li>
 						</ul>
-						<ul class="nav navbar-nav ml-auto">
-							<li class="nav-item"><a href="#" class="search">
-									<i class="lnr lnr-magnifier" id="search"></i></a>
-							</li>
-						</ul>
+
 					</div>
 				</div>
 			</nav>
