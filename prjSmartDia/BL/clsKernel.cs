@@ -11,7 +11,7 @@ public static class clsKernel
     static List<clsKelime> _ElenenKelimeler = new List<clsKelime>();
     static List<clsEslesenKelime> _EslesenKelimeler = new List<clsEslesenKelime>();
     static string _sHastaAciklama = "";
-    static List<string> _sHastaAciklamaKelimeleri = new List<string>();
+    static List<clsKelime> _Kelimeler = new List<clsKelime>();
 
 
     public static List<clsEslesenKelime> EslenenKelimeler
