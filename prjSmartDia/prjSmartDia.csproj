@@ -170,6 +170,7 @@
     <Content Include="js\theme.js" />
     <Content Include="UserControls\Banner1.ascx" />
     <Content Include="UserControls\Banner2.ascx" />
+    <Content Include="UserControls\Contact.ascx" />
     <Content Include="UserControls\Detail1.ascx" />
     <Content Include="UserControls\Disease.ascx" />
     <Content Include="UserControls\Footer.ascx" />
@@ -211,6 +212,7 @@
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
+    <Content Include="wfContact.aspx" />
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +240,13 @@
     </Compile>
     <Compile Include="UserControls\Banner2.ascx.designer.cs">
       <DependentUpon>Banner2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Contact.ascx.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Contact.ascx.designer.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Detail1.ascx.cs">
       <DependentUpon>Detail1.ascx</DependentUpon>
@@ -315,6 +324,13 @@
     </Compile>
     <Compile Include="UserControls\TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wfContact.aspx.cs">
+      <DependentUpon>wfContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfContact.aspx.designer.cs">
+      <DependentUpon>wfContact.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfHomePage.aspx.cs">
       <DependentUpon>wfHomePage.aspx</DependentUpon>

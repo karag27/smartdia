@@ -7,7 +7,7 @@
 <%@ Register Src="~/UserControls/istatical.ascx" TagPrefix="uc1" TagName="istatical" %>
 
 <%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
-<%@ Register Src="~/UserControls/Map.ascx" TagPrefix="uc1" TagName="Map" %>
+
 <%@ Register Src="~/UserControls/FormContact.ascx" TagPrefix="uc1" TagName="FormContact" %>
 <%@ Register Src="~/UserControls/Banner2.ascx" TagPrefix="uc1" TagName="Banner2" %>
 

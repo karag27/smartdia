@@ -22,8 +22,8 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+							<li class="nav-item active"><a class="nav-link" href="index.html">Anasayfa</a></li>
+							<li class="nav-item"><a class="nav-link" href="wfContact.aspx">Hakkımızda</a></li>
 							<li class="nav-item"><a class="nav-link" href="departments.html">Department</a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
