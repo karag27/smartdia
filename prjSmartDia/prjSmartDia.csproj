@@ -181,6 +181,9 @@
     <Content Include="UserControls\Team.ascx" />
     <Content Include="UserControls\TopHeader.ascx" />
     <Content Include="UserControls\TopMenu.ascx" />
+    <Content Include="SQLite\sqldiff.exe" />
+    <Content Include="SQLite\sqlite3.exe" />
+    <Content Include="SQLite\sqlite3_analyzer.exe" />
     <Content Include="vendors\animate-css\animate.css" />
     <Content Include="vendors\animate-css\wow.min.js" />
     <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
