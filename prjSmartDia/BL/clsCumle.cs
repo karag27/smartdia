@@ -6,7 +6,6 @@ using System.Web;
 
     public class clsCumle
     {
-
     private string[] _sKelimeler;
 
     public string[] sKelimeler
@@ -18,9 +17,9 @@ using System.Web;
     //method kelimeleri ayırma kelimeleri parçalama 
     //bağlaçlarda ayırma yontemi
 
-    string[] sAyracListe = {"." };
-    string[] sKirliAyrac = {"_","-","!","<",">","'","\u0022","+","/","*","|"};
-    string[] sEdat;
+    string[] sAyracListe = { "." };
+    char[] sKirliAyrac = { '_', '-', '!', '<', '>', ' ', '\u0022', '+', '/', '*', '|' };
+    string[] sEdat= {"ve","veya" };
 
 
     private string[] _sCumeleler;
@@ -35,13 +34,38 @@ using System.Web;
     //Cumleyi kelimelere bölecek
     //String dizi . ayraçlar
     //Cumleleri . ayırma 
-   
-        public void CumleleriAyir(string sCumle)
+
+
+
+
+    public void TemizKelimeler()
     {
-        foreach (string item in sAyracListe )
+
+        for (int k=0;k<sKelimeler.Length;k++)
         {
-            char cAyrac = Convert.ToChar(item);
-            sCumleler = sCumle.Split(cAyrac);
+            char[] cHarf = sKelimeler[k].ToCharArray();
+            string sYeniKelime = "";
+
+            for (int i = 0; i < sKirliAyrac.Length; i++)
+            {
+         
+                for (int j = 0; j < cHarf.Length; j++)
+                {
+
+                    if (cHarf[j] != sKirliAyrac[i])
+                    {
+                        sYeniKelime += Convert.ToString(cHarf[i]);
+                        break;
+                    }
+
+
+
+                }
+                sKelimeler[k] = sYeniKelime;
+                sYeniKelime = "";
+
+            }
+
 
 
         }
@@ -49,23 +73,52 @@ using System.Web;
     }
 
 
-    public void TemizKelimeler()
+
+
+    public void EdatTemizle()
     {
-        foreach (string item in sKelimeler)
+
+        for (int k = 0; k < sKelimeler.Length; k++)
         {
-            char[] cHarf = item.ToCharArray();
-         
+            char[] cHarf = sKelimeler[k].ToCharArray();
+            string sYeniKelime = "";
 
-            for (int i = 0; i <sKirliAyrac.Length ; i++)
+            for (int i = 0; i < sEdat.Length; i++)
             {
+                char[] sEdatParcala = sEdat[i].ToCharArray();
+                int iSayac = 0;
+                for (int j = 0; j < cHarf.Length; j++)
+                {
 
+                    if (cHarf[j] == sEdatParcala[i])
+                    {
+                        iSayac++;
+                    }
 
+                }
 
-            }   
+                if (iSayac== sEdatParcala.Length)
+                {
+                    sKelimeler[k] ="";
+                    sYeniKelime = "";
+                    break;
+
+                }
+                else
+                {
+                    sKelimeler[k] = sYeniKelime;
+                    sYeniKelime = "";
+                }
+            }
 
 
 
         }
+
+
+
+
+
 
     }
 
@@ -81,6 +134,19 @@ using System.Web;
         }
     }
 
+    public void CumleleriAyir(string sCumle)
+    {
+
+        //sAyraçlistesindeki cahara göre split ediliyor.
+        foreach (string item in sAyracListe)
+        {
+            char cAyrac = Convert.ToChar(item);
+            sCumleler = sCumle.Split(cAyrac);
+
+
+        }
+
+    }
 
 
 }

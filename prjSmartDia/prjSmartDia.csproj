@@ -255,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\clsBelirti.cs" />
+    <Compile Include="BL\clsCumle.cs" />
     <Compile Include="BL\clsEslesenKelime.cs" />
     <Compile Include="BL\clsHastalik.cs" />
     <Compile Include="BL\clsKelime.cs" />
