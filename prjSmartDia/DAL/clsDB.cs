@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Data;
 
-public class DB
+public class clsDB
 {
-    public  DB()
+    public  clsDB()
     {
 
     }
@@ -20,6 +20,20 @@ public class DB
     {
         DataTable dtData = null;
 
+
+        return dtData;
+    }
+
+    public DataTable GetHastaliklar()
+    {
+        DataTable dtData = null;
+
+        return dtData;
+    }
+
+    public DataTable GetHastalikBelirtileri()
+    {
+        DataTable dtData = null;
 
         return dtData;
     }

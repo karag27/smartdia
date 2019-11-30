@@ -254,8 +254,11 @@
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\clsBelirti.cs" />
+    <Compile Include="BL\clsHastalik.cs" />
+    <Compile Include="BL\clsKernel.cs" />
     <Compile Include="BL\clsZemberek.cs" />
-    <Compile Include="DAL\DB.cs" />
+    <Compile Include="DAL\clsDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
