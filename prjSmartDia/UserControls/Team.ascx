@@ -5,7 +5,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7">
 					<div class="main_title">
-						<h2>Smartdia Ekibi</h2>
+						<h2>SmartDia Ekibi</h2>
 				
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Cengiz SERTKAYA</h4>
+							<h4>Yusuf UĞURLU</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>
@@ -77,7 +77,7 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
-							<h4>Yusuf UĞURLU</h4>
+							<h4>Cengiz SERTKAYA</h4>
 							<p class="profession">Sr. Faculty Data Science</p>
 							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
 						</div>

@@ -11,60 +11,93 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="row">
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/kulak.jpg" alt="">
+							<img src="img/kulak.png" alt="">
 						</div>
-						<h4>Cardiology</h4>
+						<h4>Vertigo</h4>
 					</div>
 				</div>
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon2.png" alt="">
+							<img src="img/burun.png" alt="">
 						</div>
-						<h4>Urology</h4>
+						<h4>Grip</h4>
 					</div>
 				</div>
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon3.png" alt="">
+							<img src="img/mide.png" alt="">
 						</div>
-						<h4>Dental Care</h4>
+						<h4>Ülser</h4>
 					</div>
 				</div>
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon4.png" alt="">
+							<img src="img/kabız.png" alt="">
 						</div>
-						<h4>Eye Care</h4>
+						<h4>Kabızlık</h4>
 					</div>
 				</div>
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon5.png" alt="">
+							<img src="img/idrar.png" alt="">
 						</div>
-						<h4>Neurology</h4>
+						<h4>İdrar yolu enfeksiyonu</h4>
 					</div>
 				</div>
+
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon6.png" alt="">
+							<img src="img/Böbrek.png" alt="">
 						</div>
-						<h4>Plastic Surgery</h4>
+						<h4>Böbrek taşı</h4>
+					</div>
+				</div>
+                
+                <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/depresyon.png" alt="">
+						</div>
+						<h4>Depresyon</h4>
+					</div>
+				</div>
+                <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/Ülser.png" alt="">
+						</div>
+						<h4>Ülser</h4>
+					</div>
+				</div>
+                  <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/Dismenore.png" alt="">
+						</div>
+						<h4>Adet sancısı</h4>
+					</div>
+				</div>
+                <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/Bel.png" alt="">
+						</div>
+						<h4>Bel fıtığı</h4>
 					</div>
 				</div>
 				<a class="primary-btn text-uppercase" href="#">Learn More</a>
