@@ -201,8 +201,7 @@
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
-    <Content Include="wfContactUs.aspx" />
-    <Content Include="wfHomePage.aspx" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -215,19 +214,12 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="wfContactUs.aspx.cs">
-      <DependentUpon>wfContactUs.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="wfContactUs.aspx.designer.cs">
-      <DependentUpon>wfContactUs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="wfHomePage.aspx.cs">
-      <DependentUpon>wfHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="wfHomePage.aspx.designer.cs">
-      <DependentUpon>wfHomePage.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
