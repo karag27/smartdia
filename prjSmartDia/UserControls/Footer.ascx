@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-lg-3  col-md-6 col-sm-6">
 						<div class="single-footer-widget">
-							<h4 class="text-white">About Us</h4>
+							<h4 class="text-white">Hakkımızda</h4>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
 								magna aliqua.
@@ -15,7 +15,7 @@
 					</div>
 					<div class="col-lg-4  col-md-6 col-sm-6">
 						<div class="single-footer-widget">
-							<h4 class="text-white">Contact Us</h4>
+							<h4 class="text-white">İletişim</h4>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
 								magna aliqua.
@@ -28,20 +28,20 @@
 					</div>
 					<div class="col-lg-5  col-md-6 col-sm-6">
 						<div class="single-footer-widget">
-							<h4 class="text-white">Newsletter</h4>
+							<h4 class="text-white">Yeni haberler</h4>
 							<p>You can trust us. we only send offers, not a single spam.</p>
 							<div class="d-flex flex-row" id="mc_embed_signup">
 								<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
 								 method="get">
 									<div class="input-group add-on">
-										<input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+										<input class="form-control" name="EMAIL" placeholder="Email adresiniz" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
 										 required="" type="email">
 										<div style="position: absolute; left: -5000px;">
 											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
 										</div>
 										<div class="input-group-btn">
 											<button class="genric-btn text-uppercase">
-												get started
+												Gönder
 											</button>
 										</div>
 									</div>
@@ -59,7 +59,7 @@
 			<div class="container">
 				<div class="d-flex justify-content-between align-items-center flex-wrap">
 					<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+SmartDia@<script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır. <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">SmartDia</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 					<div class="footer-social d-flex align-items-center">
 						<a href="#"><i class="fa fa-facebook"></i></a>
