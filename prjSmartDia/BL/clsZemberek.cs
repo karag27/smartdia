@@ -21,17 +21,18 @@ public class clsZemberek
     }
 
      Zemberek zKok = new Zemberek(new TurkiyeTurkcesi());
-    public string KokGetir(string skelime)
+    public string KokGetir(string sKelime)
     {
-        Kelime[] cozumler = zKok.kelimeCozumle(skelime);
+        Kelime[] cozumler = zKok.kelimeCozumle(sKelime);
 
         if (cozumler.Length == 0)
         {
 
-            return skelime;
+            return sKelime;
         }
 
-        Kelime kelime1 = cozumler[maxIndex];
+
+        Kelime kelime1 = cozumler[0];
         return  kelime1.kok().icerik(); 
 
 
