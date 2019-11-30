@@ -17,7 +17,7 @@
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/department/d-icon1.png" alt="">
+							<img src="img/kulak.jpg" alt="">
 						</div>
 						<h4>Cardiology</h4>
 					</div>
