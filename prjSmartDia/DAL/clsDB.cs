@@ -31,7 +31,7 @@ public class clsDB
         return dtData;
     }
 
-    public DataTable GetHastalikBelirtileri()
+    public DataTable GetHastalikBelirtileri(int iHastalikKodu)
     {
         DataTable dtData = null;
 
