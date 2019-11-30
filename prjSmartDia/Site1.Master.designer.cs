@@ -101,5 +101,41 @@ namespace prjSmartDia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::prjSmartDia.UserControls.Team Team;
+        
+        /// <summary>
+        /// Banner2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::prjSmartDia.UserControls.Banner2 Banner2;
+        
+        /// <summary>
+        /// Map control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::prjSmartDia.UserControls.Map Map;
+        
+        /// <summary>
+        /// FormContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::prjSmartDia.UserControls.FormContact FormContact;
+        
+        /// <summary>
+        /// Footer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::prjSmartDia.UserControls.Footer Footer;
     }
 }
