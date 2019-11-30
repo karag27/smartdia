@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="wfContact.aspx.cs" Inherits="prjSmartDia.WebForm2" %>
 
 <%@ Register Src="~/UserControls/BannerContent.ascx" TagPrefix="uc1" TagName="BannerContent" %>
-<%@ Register Src="~/UserControls/Banner2.ascx" TagPrefix="uc1" TagName="Banner2" %>
+<%@ Register Src="~/UserControls/Contact.ascx" TagPrefix="uc1" TagName="Contact" %>
+
+
 
 
 
