@@ -5,48 +5,38 @@ using System.Web;
 using System.Data;
 
 
-public class clsKernel
+public static class clsKernel
 {
-    clsDB DB = new clsDB();
-    List<clsHastalik> _Hastaliklar = new List<clsHastalik>();
+    static List<clsHastalik> _Hastaliklar = new List<clsHastalik>();
+    static List<clsKelime> _ElenenKelimeler = new List<clsKelime>();
+    static List<clsKelime> _EslenenKelimeler = new List<clsKelime>();
+    static string _sHastaAciklama = "";
 
-    string _sHastaAciklama = "";
-
-
-
-
-    public List<clsHastalik> Hastaliklar
+    public static List<clsHastalik> Hastaliklar
     {
         get { return _Hastaliklar; }
         set { _Hastaliklar = value; }
     }
 
-    public string sHastaliklar
+    public static string sHastaAciklama
     {
         get { return _sHastaAciklama; }
         set { _sHastaAciklama = value; }
     }
 
-
-
-
-
-    public clsKernel()
+    public static void Initialize()
     {
-
-
-    }
-
-    public void Initialize()
-    {
+        clsDB DB = new clsDB();
         clsHastalik Hastalik;
         clsBelirti Belirti;
-        DataTable dtHastaliklar, dtHastalikBelirtileri;
-        DataRow drHastalik, drBelirti;
+        clsKelime Kelime;
+        clsEslesenKelime EslesenKelime;
+        DataTable dtHastaliklar, dtHastalikBelirtileri, dtElenenKelimeler,dtEslesenKelimeler;
+        DataRow drHastalik, drHastalikBelirtisi, drElenenKelime,drEslesenKelime, drBelirti;
 
         dtHastaliklar = DB.GetHastaliklar();
 
-        int i = 0, j = 0, iHastalikKodu = 0;
+        int i = 0, j = 0;
         for (i = 0; i < dtHastaliklar.Rows.Count; i++)
         {
             Hastalik = new clsHastalik();
@@ -57,15 +47,35 @@ public class clsKernel
             for (j = 0; j < dtHastalikBelirtileri.Rows.Count; i++)
             {
                 Belirti = new clsBelirti();
-                drBelirti = dtHastalikBelirtileri.Rows[j];
-                Belirti.iKodu = (int)dtHastalikBelirtileri["BelirtiKodu"];
-                Belirti.sAdi = dtHastalikBelirtileri["BelirtiAdi"].ToString();
-                Belirti.iHastalikBelirtiKodu = (int)dtHastalikBelirtileri["HastalikBelirtiKodu"];
+                drHastalikBelirtisi = dtHastalikBelirtileri.Rows[j];
+                Belirti.iKodu = (int)drHastalikBelirtisi["BelirtiKodu"];
+                Belirti.sAdi = drHastalikBelirtisi["BelirtiAdi"].ToString();
+                Belirti.iHastalikBelirtiKodu = (int)drHastalikBelirtisi["HastalikBelirtiKodu"];
                 Hastalik.Belirtiler.Add(Belirti);
             }
-            Hastaliklar.Add(Hastalik);
+            _Hastaliklar.Add(Hastalik);
+        }
+        
+        dtElenenKelimeler = DB.GetElenenKelimeler();
+        for (i = 0; i < dtElenenKelimeler.Rows.Count; i++)
+        {
+            Kelime = new clsKelime();
+            drElenenKelime = dtElenenKelimeler.Rows[i];
+            Kelime.iKodu = (int)drElenenKelime["Kodu"];
+            Kelime.sAdi = drElenenKelime["Adi"].ToString();
+            _ElenenKelimeler.Add(Kelime);
         }
 
+        dtEslesenKelimeler = DB.GetEslesenKelimeler();
+        for (i = 0; i < dtEslesenKelimeler.Rows.Count; i++)
+        {
+            EslesenKelime = new clsEslesenKelime();
+            drEslesenKelime = dtEslesenKelimeler.Rows[i];
+            EslesenKelime.iKodu = (int)drEslesenKelime["Kodu"];
+            EslesenKelime.sAdi = drEslesenKelime["Adi"].ToString();
+            EslesenKelime.sEslenigi = drEslesenKelime["Eslenigi"].ToString();
+            _EslesenKelimeler.Add(EslesenKelime);
+        }
     }
 
 }
