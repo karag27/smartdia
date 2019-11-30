@@ -13,7 +13,7 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua.
 					</p>
-					<a class="primary-btn text-uppercase" href="#">Learn More</a>
+					<a class="primary-btn text-uppercase" href="#">TESPİT ET</a>
 				</div>
 			</div>
 		</div>
