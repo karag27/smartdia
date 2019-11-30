@@ -10,7 +10,7 @@ public class clsDB
     {
 
     }
-
+    
     public void RunQuery(string sQuery)
     {
 
@@ -31,7 +31,21 @@ public class clsDB
         return dtData;
     }
 
-    public DataTable GetHastalikBelirtileri()
+    public DataTable GetHastalikBelirtileri(int iHastalikKodu)
+    {
+        DataTable dtData = null;
+
+        return dtData;
+    }
+
+    public DataTable GetElenenKelimeler()
+    {
+        DataTable dtData = null;
+
+        return dtData;
+    }
+
+    public DataTable GetEslesenKelimeler()
     {
         DataTable dtData = null;
 
