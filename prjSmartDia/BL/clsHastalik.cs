@@ -11,8 +11,6 @@ public class clsHastalik
 
 
 
-
-
     public string sAdi
     {
         get { return _sAdi; }
@@ -22,6 +20,14 @@ public class clsHastalik
     {
         get { return _iKodu; }
         set { _iKodu = value; }
+    }
+
+
+
+    public List<clsBelirti> Belirtiler
+    {
+        get { return _Belirtiler; }
+        set { _Belirtiler = value; }
     }
 
 
