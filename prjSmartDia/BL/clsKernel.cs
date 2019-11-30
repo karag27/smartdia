@@ -11,6 +11,7 @@ public static class clsKernel
     static List<clsKelime> _ElenenKelimeler = new List<clsKelime>();
     static List<clsEslesenKelime> _EslesenKelimeler = new List<clsEslesenKelime>();
     static string _sHastaAciklama = "";
+    static List<string> _sHastaAciklamaKelimeleri = new List<string>();
 
 
     public static List<clsEslesenKelime> EslenenKelimeler
@@ -93,6 +94,22 @@ public static class clsKernel
 
     public static void Process()
     {
+        _sHastaAciklamaKelimeleri.Clear();
+        _sHastaAciklamaKelimeleri.Add("Erkek");
+        _sHastaAciklamaKelimeleri.Add("idrar");
+        _sHastaAciklamaKelimeleri.Add("zor");
+
+//        SELECT* FROM tblHastaliklar H
+// INNER JOIN tblHastalikBelirtileri HB ON H.Kodu = HB.HastalikKodu
+// INNER JOIN tblBelirtiler B ON HB.BelirtiKodu = B.Kodu
+// LEFT JOIN tblEslesenKelimeler EK ON EK.Adi = B.Adi
+//WHERE B.Adi IN('Baş','Ağrı')
+
+        foreach (string sKelime in _sHastaAciklamaKelimeleri)
+        {
+
+
+        }
 
 
     }
