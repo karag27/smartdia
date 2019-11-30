@@ -328,6 +328,7 @@
     <Content Include="vendors\linericon\fonts\Linearicons-Free.ttf" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.woff" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.woff2" />
+    <Content Include="SQLite\SmartDia.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
