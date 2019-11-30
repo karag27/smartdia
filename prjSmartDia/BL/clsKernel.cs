@@ -19,15 +19,12 @@ public static class clsKernel
         set { _EslesenKelimeler = value; }
     }
 
-
-
     public static List<clsKelime> ElenenKelimeler
     {
         get { return _ElenenKelimeler; }
         set { _ElenenKelimeler = value; }
     }
-
-    
+        
     public static List<clsHastalik> Hastaliklar
     {
         get { return _Hastaliklar; }
@@ -92,6 +89,12 @@ public static class clsKernel
             EslesenKelime.sEslenigi = drEslesenKelime["Eslenigi"].ToString();
             _EslesenKelimeler.Add(EslesenKelime);
         }
+    }
+
+    public static void Process()
+    {
+
+
     }
 
 }

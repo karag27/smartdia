@@ -7,12 +7,14 @@ public class clsEslesenKelime: clsKelime
 {
     string _sEslenigi = "";
     
-
     public string sEslenigi
     {
         get { return _sEslenigi; }
         set { _sEslenigi = value; }
     }
 
+    public clsEslesenKelime()
+    {
 
+    }
 }
