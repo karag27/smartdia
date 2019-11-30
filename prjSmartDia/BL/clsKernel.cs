@@ -99,12 +99,6 @@ public static class clsKernel
         _sHastaAciklamaKelimeleri.Add("idrar");
         _sHastaAciklamaKelimeleri.Add("zor");
 
-//        SELECT* FROM tblHastaliklar H
-// INNER JOIN tblHastalikBelirtileri HB ON H.Kodu = HB.HastalikKodu
-// INNER JOIN tblBelirtiler B ON HB.BelirtiKodu = B.Kodu
-// LEFT JOIN tblEslesenKelimeler EK ON EK.Adi = B.Adi
-//WHERE B.Adi IN('Baş','Ağrı')
-
         foreach (string sKelime in _sHastaAciklamaKelimeleri)
         {
 
