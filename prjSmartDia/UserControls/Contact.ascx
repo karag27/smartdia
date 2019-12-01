@@ -18,7 +18,7 @@
                         </div>
                         <div class="info_item">
                             <i class="lnr lnr-envelope"></i>
-                            <h6><a href="#">cengizsertkaya@iesu.edu.tr</a></h6>
+                            <h6><a href="#">info@smartdia.com</a></h6>
                         </div>
                     </div>
                 </div>

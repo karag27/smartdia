@@ -72,7 +72,7 @@ public static class clsUtilities
             {
                 if (sGrup[1] != "")
                     sKosul = sKosul + " OR (B.Adi LIKE '%" + sGrup[0] + "%' AND B.Adi LIKE '%" + sGrup[1] + "%')";
-                else
+                else if (sGrup[0] != "")
                 {
                     sKosul = sKosul + " OR (B.Adi LIKE '%" + sGrup[0] + "%' AND DirektAl = 0)";
                     sKosul = sKosul + " OR (B.Adi LIKE '" + sGrup[0] + "' AND DirektAl = 1)";

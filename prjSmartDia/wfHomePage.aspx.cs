@@ -11,7 +11,8 @@ namespace prjSmartDia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            clsDB DB = new clsDB();
+            DB.SaveAgirliklar();
         }
     }
 }

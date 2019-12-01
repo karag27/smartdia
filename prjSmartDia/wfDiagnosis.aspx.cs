@@ -11,11 +11,23 @@ namespace prjSmartDia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int iTalepID = 4;
-            clsKernel.Process(iTalepID);
+            string sScript = "";
+            //int iTalepID = 3;
+            //clsKernel.Process(iTalepID);
 
-           string sURL = "~/wfDiagnosisResult.aspx?TalepKodu=" + iTalepID.ToString();
-            Response.Redirect(sURL);
+            //string sURL = "~/wfDiagnosisResult.aspx?TalepKodu=" + iTalepID.ToString();
+            //Response.Redirect(sURL);
+            if (!IsPostBack)
+            {
+                if (Request["NoResults"] != null)
+                {
+                    sScript = "<script type=\"text/javascript\">";
+                    sScript = sScript + " alert('Girilen bilgilere göre bir teşhis yapılamamıştır." +
+                            " Lütfen bilgileri detaylı şekilde girdiginizden emin olunuz.');";
+                    sScript = sScript + "</script>";
+                    Page.RegisterClientScriptBlock("alertnoresult", sScript);
+                }
+            }
         }
 
         protected void btnTespit_Click(object sender, EventArgs e)

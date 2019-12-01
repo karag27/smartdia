@@ -23,14 +23,21 @@ namespace prjSmartDia.UserControls
             iTalepKodu = int.Parse(Request["TalepKodu"].ToString());
 
             dtData = DB.GetTalepTeshisleri(iTalepKodu);
+           
             rptrTeshisler.DataSource = dtData;
             rptrTeshisler.DataBind();
+
+            if(dtData.Rows.Count==0)
+            {
+                Response.Redirect("wfDiagnosis.aspx?NoResults=1");
+            }
 
         }
 
         protected void rptrTeshisler_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             DataRow drData = (e.Item.DataItem as DataRowView).Row;
+            Literal ltrlHastalikAdi = e.Item.FindControl("ltrlHastalikAdi") as Literal;
             Literal ltrlImage = e.Item.FindControl("ltrlImage") as Literal;
             Literal ltrlYuzde = e.Item.FindControl("ltrlYuzde") as Literal;
             Literal ltrlHastalikAciklama = e.Item.FindControl("ltrlHastalikAciklama") as Literal;
@@ -45,6 +52,8 @@ namespace prjSmartDia.UserControls
             ltrlHastalikAciklama.Text = drData["HastalikAciklamasi"].ToString();
             ltrlHastalikBelirtiAciklamasi.Text = drData["HastalikBelirtiAciklamasi"].ToString();
             ltrlHastalikSistemAciklamasi.Text = drData["Aciklama"].ToString();
+
+            ltrlHastalikAdi.Text = drData["HastalikAdi"].ToString();
         }
     }
 }

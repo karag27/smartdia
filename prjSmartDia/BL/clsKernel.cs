@@ -130,17 +130,18 @@ public static class clsKernel
             drTeshis = dtTeshisler.Rows[i];
             Teshis.iKodu = (int)drTeshis["Kodu"];
             Teshis.sAdi = drTeshis["Adi"].ToString();
-            Teshis.iSayi = int.Parse(drTeshis["Sayi"].ToString());
+            Teshis.iYuzde = int.Parse(Math.Round(double.Parse(drTeshis["Sayi"].ToString())*100,0).ToString());
             iToplamSayi += Teshis.iSayi;
+            DB.SaveTeshis(iTalepID, Teshis.iKodu, Teshis.iYuzde, sTeshisAciklama);
             _Teshisler.Add(Teshis);
         }
 
-        for (i = 0; i < dtTeshisler.Rows.Count; i++)
-        {
-            _Teshisler[i].iYuzde = int.Parse(Math.Round(_Teshisler[i].iSayi * 100.00 / iToplamSayi,0).ToString());
+        //for (i = 0; i < dtTeshisler.Rows.Count; i++)
+        //{
+        //    _Teshisler[i].iYuzde = int.Parse(Math.Round(_Teshisler[i].iSayi * 100.00 / iToplamSayi,0).ToString());
 
-            DB.SaveTeshis(iTalepID, _Teshisler[i].iKodu, _Teshisler[i].iYuzde, sTeshisAciklama);
-        }
+        //    DB.SaveTeshis(iTalepID, _Teshisler[i].iKodu, _Teshisler[i].iYuzde, sTeshisAciklama);
+        //}
     }
 
 }

@@ -114,6 +114,24 @@ public class clsDB
     {
         string sQuery = "";
         DataTable dtData = null;
+        sQuery = "SELECT H.Kodu, H.Adi, SUM(HB.Agirlik)/(SELECT SUM(HB2.Agirlik) FROM tblHastalikBelirtileri HB2 WHERE HB2.HastalikKodu=HB.HastalikKodu) AS Sayi FROM tblHastaliklar H " +
+                " INNER JOIN tblHastalikBelirtileri HB ON H.Kodu = HB.HastalikKodu " +
+                " INNER JOIN tblBelirtiler B ON HB.BelirtiKodu = B.Kodu " +
+                " LEFT JOIN tblEslesenKelimeler EK ON EK.Adi = B.Adi " +
+                " WHERE (" + sKosul + ") " +
+                " GROUP BY H.Kodu, H.Adi " +
+                " HAVING " +
+                " SUM(HB.Agirlik)/(SELECT SUM(HB2.Agirlik) FROM tblHastalikBelirtileri HB2 WHERE HB2.HastalikKodu=HB.HastalikKodu)>=0.5 " +
+                " ORDER BY SUM(HB.Agirlik)/(SELECT SUM(HB2.Agirlik) FROM tblHastalikBelirtileri HB2 WHERE HB2.HastalikKodu=HB.HastalikKodu) DESC ";
+        dtData = RunQueryReturnDataTable(sQuery);
+        return dtData;
+    }
+
+
+    public DataTable GetTeshis2(string sKosul)
+    {
+        string sQuery = "";
+        DataTable dtData = null;
         sQuery = "SELECT H.Kodu, H.Adi, COUNT(DISTINCT HB.Kodu) AS Sayi FROM tblHastaliklar H " +
                 " INNER JOIN tblHastalikBelirtileri HB ON H.Kodu = HB.HastalikKodu " +
                 " INNER JOIN tblBelirtiler B ON HB.BelirtiKodu = B.Kodu " +
@@ -125,6 +143,7 @@ public class clsDB
         return dtData;
     }
     
+
     public DataTable GetTalepler(int iTalepKodu)
     {
         string sQuery = "";
@@ -163,6 +182,75 @@ public class clsDB
         sQuery = sQuery + "" + iTalepKodu.ToString() + "," + iHastalikKodu.ToString() + "," + iYuzde.ToString() + ",'" + sAciklama + "'";
         sQuery = sQuery + ") ";
         return RunQueryReturnID(sQuery, "tblTeshisler");
+    }
+
+    public void SaveAgirliklar()
+    {
+        string sQuery = "";
+        int iBelirtiKodu = 1, iHastalikKodu = 1,iHastalikBelirtisiKodu, iSayi = 0, iToplamSayi = 0;
+        double dAgirlik = 0;
+        DataTable dtData, dtHastalikBelirtileri, dtHastaliklar;
+        DataRow drData;
+
+        dtHastaliklar = GetHastaliklar();
+        foreach (DataRow drHastalik in dtHastaliklar.Rows)
+        {
+                iToplamSayi = 0;
+            iHastalikKodu = int.Parse(drHastalik["Kodu"].ToString());
+            dtHastalikBelirtileri = GetHastalikBelirtileri(iHastalikKodu);
+
+
+            //sQuery = " SELECT SUM(Sayi) AS Sayi FROM (";
+            //for (int i = 1; i < 12; i++)
+            //{
+            //    if (i != 1)
+            //        sQuery = sQuery + " UNION ALL ";
+            //    sQuery = sQuery + " SELECT SUM(CASE WHEN Belirti" + i.ToString() + " IS NULL THEN 0 ELSE 1 END) AS Sayi ";
+            //    sQuery = sQuery + " FROM tblKaynakVeriler WHERE ";
+            //    sQuery = sQuery + " HastalikKodu = " + iHastalikKodu.ToString();
+            //}
+            //sQuery = sQuery + " ) TBL";
+
+            sQuery = " SELECT COUNT(*) AS Sayi ";
+            sQuery = sQuery + " FROM tblKaynakVeriler WHERE ";
+            sQuery = sQuery + " HastalikKodu = " + iHastalikKodu.ToString();
+
+            dtData = RunQueryReturnDataTable(sQuery);
+            drData = dtData.Rows[0];
+
+            if (drData["Sayi"].ToString() != "")
+                iToplamSayi = int.Parse(drData["Sayi"].ToString());
+
+            foreach (DataRow drHastalikBelirtisi in dtHastalikBelirtileri.Rows)
+            {
+                iSayi = 0;
+                iHastalikBelirtisiKodu = int.Parse(drHastalikBelirtisi["Kodu"].ToString());
+                iBelirtiKodu = int.Parse(drHastalikBelirtisi["BelirtiKodu"].ToString());
+
+                sQuery = " SELECT SUM(Sayi) AS Sayi FROM (";
+                for (int i = 1; i < 12; i++)
+                {
+                    if (i != 1)
+                        sQuery = sQuery + " UNION ALL ";
+                    sQuery = sQuery + " SELECT SUM(1) AS Sayi FROM tblKaynakVeriler ";
+                    sQuery = sQuery + " WHERE Belirti" + i.ToString() + " = " + iBelirtiKodu.ToString();
+                    sQuery = sQuery + " AND HastalikKodu = " + iHastalikKodu.ToString();
+                }
+                sQuery = sQuery + " ) TBL";
+
+                dtData = RunQueryReturnDataTable(sQuery);
+                drData = dtData.Rows[0];
+
+                if (drData["Sayi"].ToString() != "")
+                    iSayi = int.Parse(drData["Sayi"].ToString());
+
+                dAgirlik = iSayi * 1.00 / iToplamSayi;
+
+                sQuery = " UPDATE tblHastalikBelirtileri SET Agirlik = " + dAgirlik.ToString().Replace(",",".");
+                sQuery = sQuery + " WHERE Kodu = " + iHastalikBelirtisiKodu.ToString();
+                RunQuery(sQuery);
+            }
+        }
     }
 
     public int GetNextID(string sTableName)
