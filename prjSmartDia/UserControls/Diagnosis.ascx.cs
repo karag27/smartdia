@@ -16,7 +16,10 @@ namespace prjSmartDia.UserControls
 
         protected void btnTespit_Click(object sender, EventArgs e)
         {
-
+            int iTalepID = 0;
+            string sURL = "";
+            sURL = "~/wfDiagnosisResult.aspx?TalepID=" + iTalepID.ToString();
+            Response.Redirect(sURL);
         }
     }
 }

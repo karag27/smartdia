@@ -10,24 +10,24 @@
 namespace prjSmartDia {
     
     
-    public partial class wfDiagnosis {
+    public partial class WebForm3 {
         
         /// <summary>
-        /// BannerDiagnosis control.
+        /// BannerDiagnosisResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::prjSmartDia.UserControls.BannerDiagnosis BannerDiagnosis;
+        protected global::prjSmartDia.UserControls.BannerDiagnosisResult BannerDiagnosisResult;
         
         /// <summary>
-        /// Diagnosis control.
+        /// DiagnosisResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::prjSmartDia.UserControls.Diagnosis Diagnosis;
+        protected global::prjSmartDia.UserControls.Diagnosisimage DiagnosisResult;
     }
 }

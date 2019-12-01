@@ -13,5 +13,14 @@ namespace prjSmartDia.UserControls
         {
 
         }
+        private void PopulateData()
+        {
+            string sData = "";
+            int iYuzde = 60;
+            sData = "<div class=\"progress-bar color-1\"" +
+                " role=\"progressbar\" style=\"width: " + iYuzde.ToString() + "%\" aria-valuenow=\"" + iYuzde.ToString() + "\" aria-valuemin=\"0\"" +
+                " aria-valuemax=\"100\">%" + iYuzde.ToString() + "</div>";
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Diagnosis.ascx.cs" Inherits="prjSmartDia.UserControls.Diagnosis" %>
+
 <div class="section-top-border">
     <div class="container">
         <div class="row">
@@ -15,11 +16,11 @@
                         <asp:TextBox ID="txtEmail" name="EMAIL" placeholder="Mail adresiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mail adresiniz'" runat="server"></asp:TextBox>
                     </div>
 
-                    <div class="mt-10" style="border: solid 1px #aaa;margin-bottom: 20px;">
+                    <div class="mt-10" style="border: solid 1px #aaa; margin-bottom: 20px;">
 
                         <textarea id="txtSikayet" placeholder="Şikayetiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'" cols="20" rows="7"></textarea>
                     </div>
-                    <asp:Button ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Tespit et" OnClick="btnTespit_Click" />
+                    <asp:LinkButton ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Tespit et" OnClick="btnTespit_Click"></asp:LinkButton>
 
                 </div>
             </div>
