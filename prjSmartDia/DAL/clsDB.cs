@@ -66,7 +66,7 @@ public class clsDB
     {
         string sQuery = "";
         DataTable dtData = null;
-        sQuery = "SELECT * FROM tblElenenKelimeler";
+        sQuery = "SELECT * FROM tblElenenKelimeler WHERE CumleBaglaciMi = 0";
         dtData = RunQueryReturnDataTable(sQuery);
         return dtData;
     }
@@ -79,4 +79,29 @@ public class clsDB
         dtData = RunQueryReturnDataTable(sQuery);
         return dtData;
     }
+
+    public DataTable GetCumleAyraclari()
+    {
+        string sQuery = "";
+        DataTable dtData = null;
+        sQuery = "SELECT * FROM tblElenenKelimeler WHERE CumleBaglaciMi = 1";
+        dtData = RunQueryReturnDataTable(sQuery);
+        return dtData;
+    }
+    
+    public DataTable GetTeshis(string sKosul)
+    {
+        string sQuery = "";
+        DataTable dtData = null;
+        sQuery = "SELECT H.Kodu, H.Adi, COUNT(DISTINCT HB.Kodu) AS Sayi FROM tblHastaliklar H " +
+                " INNER JOIN tblHastalikBelirtileri HB ON H.Kodu = HB.HastalikKodu " +
+                " INNER JOIN tblBelirtiler B ON HB.BelirtiKodu = B.Kodu " +
+                " LEFT JOIN tblEslesenKelimeler EK ON EK.Adi = B.Adi " +
+                " WHERE " + sKosul +
+                " GROUP BY H.Kodu, H.Adi " +
+                " ORDER BY COUNT(DISTINCT HB.Kodu) DESC ";
+        dtData = RunQueryReturnDataTable(sQuery);
+        return dtData;
+    }
+
 }

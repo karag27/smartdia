@@ -9,11 +9,13 @@ public static class clsKernel
 {
     static List<clsHastalik> _Hastaliklar = new List<clsHastalik>();
     static List<clsKelime> _ElenenKelimeler = new List<clsKelime>();
+    static List<clsKelime> _CumleAyraclari = new List<clsKelime>();
     static List<clsEslesenKelime> _EslesenKelimeler = new List<clsEslesenKelime>();
     static string _sHastaAciklama = "";
-    static List<clsKelime> _Kelimeler = new List<clsKelime>();
-
-
+    static List<clsCumle> _HastaAciklamaCumleleri = new List<clsCumle>();
+    static List<clsTeshis> _Teshisler = new List<clsTeshis>();
+    public static int iMaxKelimeTuretim = 2;
+    
     public static List<clsEslesenKelime> EslenenKelimeler
     {
         get { return _EslesenKelimeler; }
@@ -45,8 +47,8 @@ public static class clsKernel
         clsBelirti Belirti;
         clsKelime Kelime;
         clsEslesenKelime EslesenKelime;
-        DataTable dtHastaliklar, dtHastalikBelirtileri, dtElenenKelimeler,dtEslesenKelimeler;
-        DataRow drHastalik, drHastalikBelirtisi, drElenenKelime,drEslesenKelime, drBelirti;
+        DataTable dtHastaliklar, dtHastalikBelirtileri, dtElenenKelimeler,dtEslesenKelimeler, dtCumleAyraclari;
+        DataRow drHastalik, drHastalikBelirtisi, drElenenKelime,drEslesenKelime, drCumleAyraci;
 
         dtHastaliklar = DB.GetHastaliklar();
 
@@ -90,22 +92,46 @@ public static class clsKernel
             EslesenKelime.sEslenigi = drEslesenKelime["Eslenigi"].ToString();
             _EslesenKelimeler.Add(EslesenKelime);
         }
+
+        dtCumleAyraclari = DB.GetCumleAyraclari();
+        for (i = 0; i < dtCumleAyraclari.Rows.Count; i++)
+        {
+            Kelime = new clsKelime();
+            drCumleAyraci = dtCumleAyraclari.Rows[i];
+            Kelime.iKodu = (int)drCumleAyraci["Kodu"];
+            Kelime.sAdi = drCumleAyraci["Adi"].ToString();
+            _CumleAyraclari.Add(Kelime);
+        }
     }
 
     public static void Process()
     {
-        _sHastaAciklamaKelimeleri.Clear();
-        _sHastaAciklamaKelimeleri.Add("Erkek");
-        _sHastaAciklamaKelimeleri.Add("idrar");
-        _sHastaAciklamaKelimeleri.Add("zor");
+        clsDB DB = new clsDB();
+        clsTeshis Teshis;
+        string sTeshisKosul = "";
+        int i = 0, iToplamSayi = 0;
+        DataTable dtTeshisler;
+        DataRow drTeshis;
+        _HastaAciklamaCumleleri = clsUtilities.CumlelereBol(sHastaAciklama, _CumleAyraclari);
+        sTeshisKosul = clsUtilities.sTeshisKosulOlustur(_HastaAciklamaCumleleri);
+        dtTeshisler = DB.GetTeshis(sTeshisKosul);
 
-        foreach (string sKelime in _sHastaAciklamaKelimeleri)
+        _Teshisler.Clear();
+        for (i = 0; i < dtTeshisler.Rows.Count; i++)
         {
-
-
+            Teshis = new clsTeshis();
+            drTeshis = dtTeshisler.Rows[i];
+            Teshis.iKodu = (int)drTeshis["Kodu"];
+            Teshis.sAdi = drTeshis["Adi"].ToString();
+            Teshis.iSayi = (int)drTeshis["Sayi"];
+            iToplamSayi += Teshis.iSayi;
+            _Teshisler.Add(Teshis);
         }
 
-
+        for (i = 0; i < dtTeshisler.Rows.Count; i++)
+        {
+            _Teshisler[i].iYuzde = int.Parse(Math.Round(_Teshisler[i].iSayi * 1.00 / iToplamSayi,0).ToString());
+        }
     }
 
 }

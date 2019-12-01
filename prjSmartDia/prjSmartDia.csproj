@@ -262,6 +262,7 @@
     <Compile Include="BL\clsKelime.cs" />
     <Compile Include="BL\clsKernel.cs" />
     <Compile Include="BL\clsTeshis.cs" />
+    <Compile Include="BL\clsUtilities.cs" />
     <Compile Include="BL\clsZemberek.cs" />
     <Compile Include="DAL\clsDB.cs" />
     <Compile Include="Global.asax.cs">

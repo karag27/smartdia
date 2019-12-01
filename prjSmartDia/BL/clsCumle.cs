@@ -4,87 +4,74 @@ using System.Linq;
 using System.Web;
 
 
-    public class clsCumle
-    {
+public class clsCumle
+{
+    string _sAdi = "";
+    List<clsKelime> _Kelimeler = new List<clsKelime>();
+    List<string[]> _KelimeGruplari = new List<string[]>();
+    int iMaxGrupAraligi = 5;
 
-    string[] _sAyracListe;
-
-    public string[] sAyracListe
+    public string sAdi
     {
-        get { return _sAyracListe; }
-        set {_sAyracListe = value; }
+        get { return _sAdi; }
+        set { _sAdi = value; }
     }
 
-    string[] _sKirliAyrac;
-    public string[] sKirliAyrac
+    public List<clsKelime> Kelimeler
     {
-        get { return _sKirliAyrac; }
-        set { _sKirliAyrac = value; }
-    }
-  
-
-    private string[] _sCumleler;
-
-    public string[] sCumleler
-    {
-        get { return _sCumleler; }
-        set { _sCumleler = value; }
+        get { return _Kelimeler; }
+        set { _Kelimeler = value; }
     }
 
-
-    public void EdatTemizle(string sParagraf)
+    public List<string[]> KelimeGruplari
     {
-        for (int i = 0; i < sKirliAyrac.Length; i++)
+        get { return _KelimeGruplari; }
+        set { _KelimeGruplari = value; }
+    }
+
+    public void KelimeEkle(string sKelime)
+    {
+        //kelimenin kokunu ve kendisini eklemelisin
+        clsKelime Kelime;
+        if (sKelime.Trim() != "")
         {
-            while (sParagraf.IndexOf(sKirliAyrac[i])!=-1)
+            Kelime = new clsKelime();
+            Kelime.sAdi = sKelime;
+            _Kelimeler.Add(Kelime);
+        }
+    }
+
+    public void KelimeGrubuOlustur()
+    {
+        string[] sGrup = new string[2];
+        for (int i = 0; i < Kelimeler.Count; i++)
+        {
+            sGrup = new string[2];
+            sGrup[0] = Kelimeler[i].sAdi;
+            sGrup[1] = "";
+            _KelimeGruplari.Add(sGrup);
+
+            sGrup = new string[2];
+            sGrup[0] = Kelimeler[i].sKok;
+            sGrup[1] = "";
+            _KelimeGruplari.Add(sGrup);
+
+            for (int j = i + 1; j < Kelimeler.Count && j < i + iMaxGrupAraligi; j++)
             {
-                if (sParagraf[sParagraf.IndexOf(sKirliAyrac[i])-1]==' ' && sParagraf[sParagraf.IndexOf(sKirliAyrac[i])+sKirliAyrac[i].Length ] ==' ')
+                if (Kelimeler[i].sKok != "" && Kelimeler[j].sKok != "")
                 {
-                    sParagraf = sParagraf.Replace(sKirliAyrac[i], " ");
+                    sGrup = new string[2];
+                    sGrup[0] = Kelimeler[i].sKok;
+                    sGrup[1] = Kelimeler[j].sKok;
+                    _KelimeGruplari.Add(sGrup);
                 }
-
             }
-
         }
-       
     }
 
-
- 
-
-    public void bosluklariAl(string sParagraf)
+    public clsCumle()
     {
-      
-
-            while (sParagraf.IndexOf("  ") != -1)
-            {
-
-            sParagraf = sParagraf.Replace("  ", " ");
-            }
-        
-       
-    }
-
-    
-
-
-    public string[] CumleleriAyir(string sParagraf)
-    {
-       
-        /*foreach (char  item in sKirliAyrac)
-        {
-            sParagraf=sParagraf.Replace(item,' ');
-
-        }
-        */
-       
-  
-
-        EdatTemizle(sParagraf);
-        bosluklariAl(sParagraf);
-        return sCumleler;
 
     }
-
 
 }
