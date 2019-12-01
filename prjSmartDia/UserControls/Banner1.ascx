@@ -1,12 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Banner1.ascx.cs" Inherits="prjSmartDia.UserControls.Banner1" %>
 	<!--================ Start Home Banner Area =================-->
-<section class="home_banner_area" style="background:#9b5cf6;">
+<section class="home_banner_area" style="background:cadetblue;">
 		<div class="banner_inner">
 			<div class="container">
 				<div class="banner_content">
 					<h2>
 						SmartDia <br>
-						Akıllı hasta<br>
+						Akıllı Teşhis<br>
 						 Sistemi<br>
 					</h2>
 					<p>

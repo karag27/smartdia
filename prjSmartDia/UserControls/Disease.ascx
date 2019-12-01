@@ -64,7 +64,7 @@
 						<h4>İdrar yolu enfeksiyonu</h4>
 					</div>
 				</div>
-                <div class="col-lg-1 text-center col-sm-3">
+                <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department" style="box-shadow: 0 0 0px rgba(153, 153, 153, 0.1);">
 					</div>
 				</div>
@@ -87,14 +87,7 @@
 						<h4>Depresyon</h4>
 					</div>
 				</div>
-                  <div class="col-lg-2 text-center col-sm-6">
-					<div class="single_department">
-						<div class="dpmt-thumb">
-							<img src="img/hastalik9.png" alt="">
-						</div>
-						<h4>Adet sancısı</h4>
-					</div>
-				</div>
+
                 <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
