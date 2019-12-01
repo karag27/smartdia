@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 
-public class clsTeshis : clsHastalik;
+public class clsTeshis : clsHastalik
 {
     string sBelirtiKodlari = "";
     string sAyrac = "|";
