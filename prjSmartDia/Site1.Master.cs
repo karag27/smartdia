@@ -11,7 +11,7 @@ namespace prjSmartDia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            clsKernel.Initialize();
+            //clsKernel.Initialize();
         }
     }
 }
