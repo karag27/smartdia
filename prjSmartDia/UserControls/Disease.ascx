@@ -15,7 +15,7 @@
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/kulak.png" alt="">
+							<img src="img/hastalik1.png" alt="">
 						</div>
 						<h4>Vertigo</h4>
 					</div>
@@ -24,7 +24,7 @@
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/burun.png" alt="">
+							<img src="img/hastalik2.png" alt="">
 						</div>
 						<h4>Grip</h4>
 					</div>
@@ -33,16 +33,24 @@
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/mide.png" alt="">
+							<img src="img/hastalik3.png" alt="">
+						</div>
+						<h4>Reflü</h4>
+					</div>
+				</div>
+				<!-- single department -->
+                  <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/hastalik4.png" alt="">
 						</div>
 						<h4>Ülser</h4>
 					</div>
 				</div>
-				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/kabız.png" alt="">
+							<img src="img/hastalik5.png" alt="">
 						</div>
 						<h4>Kabızlık</h4>
 					</div>
@@ -51,46 +59,38 @@
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/idrar.png" alt="">
+							<img src="img/hastalik6.png" alt="">
 						</div>
 						<h4>İdrar yolu enfeksiyonu</h4>
 					</div>
 				</div>
-
+                <div class="col-lg-1 text-center col-sm-3">
+					<div class="single_department" style="box-shadow: 0 0 0px rgba(153, 153, 153, 0.1);">
+					</div>
+				</div>
 				<!-- single department -->
 				<div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/Böbrek.png" alt="">
+							<img src="img/hastalik7.png" alt="">
 						</div>
 						<h4>Böbrek taşı</h4>
 					</div>
 				</div>
-<div class="col-lg-2 text-center col-sm-6">
-					<div class="single_department" style="box-shadow: 0 0 0px rgba(153, 153, 153, 0.1);">
-					</div>
-				</div>
+
                 
                 <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/depresyon.png" alt="">
+							<img src="img/hastalik8.png" alt="">
 						</div>
 						<h4>Depresyon</h4>
-					</div>
-				</div>
-                <div class="col-lg-2 text-center col-sm-6">
-					<div class="single_department">
-						<div class="dpmt-thumb">
-							<img src="img/Ülser.png" alt="">
-						</div>
-						<h4>Ülser</h4>
 					</div>
 				</div>
                   <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/Dismenore.png" alt="">
+							<img src="img/hastalik9.png" alt="">
 						</div>
 						<h4>Adet sancısı</h4>
 					</div>
@@ -98,9 +98,17 @@
                 <div class="col-lg-2 text-center col-sm-6">
 					<div class="single_department">
 						<div class="dpmt-thumb">
-							<img src="img/Bel.png" alt="">
+							<img src="img/hastalik10.png" alt="">
 						</div>
 						<h4>Bel fıtığı</h4>
+					</div>
+				</div>
+                 <div class="col-lg-2 text-center col-sm-6">
+					<div class="single_department">
+						<div class="dpmt-thumb">
+							<img src="img/hastalik11.png" alt="">
+						</div>
+						<h4>Çölyak</h4>
 					</div>
 				</div>
                   <div class="col-lg-2 text-center col-sm-6">
