@@ -24,8 +24,7 @@
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
 							<h4>Yusuf UĞURLU</h4>
-							<p class="profession">Sr. Faculty Data Science</p>
-							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
+							
 						</div>
 					</div>
 				</div>
@@ -42,8 +41,7 @@
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
 							<h4>Murat KARABULUT</h4>
-							<p class="profession">Sr. Faculty Data Science</p>
-							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
+							
 						</div>
 					</div>
 				</div>
@@ -60,8 +58,7 @@
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
 							<h4>İslam MAYDA</h4>
-							<p class="profession">Sr. Faculty Data Science</p>
-							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
+							
 						</div>
 					</div>
 				</div>
@@ -78,8 +75,7 @@
 								<a href="#"><i class="fa fa-linkedin"></i></a>
 							</div>
 							<h4>Cengiz SERTKAYA</h4>
-							<p class="profession">Sr. Faculty Data Science</p>
-							<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price.</p>
+							<!--<p class="profession">Sr. Faculty Data Science</p>-->
 						</div>
 					</div>
 				</div>

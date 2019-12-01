@@ -8,8 +8,7 @@
 						<div class="single-footer-widget">
 							<h4 class="text-white">Hakkımızda</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-								magna aliqua.
+								SmartDia öğrenen doktorunuz sizler için burada. SmartDia nedir ? SmartDia sebebini bilmediğiniz rahatsızlıklarınıza belirli teşhisler de bulunmak için hazırlandı. SmartDia kullanıcıdan aldığı hastalık şikayet bilgisini analiz ederek teşhis bilgisi sunmaktadır. Bununla beraber hastalıkla ilgili detayları da sizlere sunmaktadır
 							</p>
 						</div>
 					</div>
@@ -17,19 +16,18 @@
 						<div class="single-footer-widget">
 							<h4 class="text-white">İletişim</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-								magna aliqua.
+								İstanbul / TÜRKİYE
 							</p>
 							<p class="number">
-								0539 497 40 91<br>
-								012-6532-569-9748
+								0539 xxx xx xx<br>
+								
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-5  col-md-6 col-sm-6">
 						<div class="single-footer-widget">
 							<h4 class="text-white">Yeni haberler</h4>
-							<p>You can trust us. we only send offers, not a single spam.</p>
+							<p>SmartDia destek için iletişim sağlayabilirsiniz.</p>
 							<div class="d-flex flex-row" id="mc_embed_signup">
 								<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
 								 method="get">

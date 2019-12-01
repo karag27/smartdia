@@ -116,7 +116,7 @@
 					</div>
 				</div>
 				</div>
-            <a class="primary-btn text-uppercase" href="wfDiagnosis.aspx">Tespit et</a>
+            <a class="primary-btn text-uppercase" href="wfDiagnosis.aspx">Teşhis et</a>
 		</div>
 	</section>
 	<!--================ End Department Area =================-->
