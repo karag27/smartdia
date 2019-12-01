@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm"
+                    <div class="row contact_form" action="contact_process.php" method="post" id="contactForm"
                         novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -44,7 +44,7 @@
                         <div class="col-md-12 text-right">
                             <button type="submit" value="submit" class="primary-btn text-uppercase">Mesaj gönder</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

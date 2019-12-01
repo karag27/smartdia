@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace prjSmartDia.UserControls
 {
@@ -11,16 +12,39 @@ namespace prjSmartDia.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            PopulateData();
         }
         private void PopulateData()
         {
-            string sData = "";
-            int iYuzde = 60;
-            sData = "<div class=\"progress-bar color-1\"" +
-                " role=\"progressbar\" style=\"width: " + iYuzde.ToString() + "%\" aria-valuenow=\"" + iYuzde.ToString() + "\" aria-valuemin=\"0\"" +
-                " aria-valuemax=\"100\">%" + iYuzde.ToString() + "</div>";
+            clsDB DB = new clsDB();
+            DataTable dtData;
+            int iTalepKodu = 0 ;
 
+            iTalepKodu = int.Parse(Request["TalepKodu"].ToString());
+
+            dtData = DB.GetTalepTeshisleri(iTalepKodu);
+            rptrTeshisler.DataSource = dtData;
+            rptrTeshisler.DataBind();
+
+        }
+
+        protected void rptrTeshisler_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            DataRow drData = (e.Item.DataItem as DataRowView).Row;
+            Literal ltrlImage = e.Item.FindControl("ltrlImage") as Literal;
+            Literal ltrlYuzde = e.Item.FindControl("ltrlYuzde") as Literal;
+            Literal ltrlHastalikAciklama = e.Item.FindControl("ltrlHastalikAciklama") as Literal;
+            Literal ltrlHastalikBelirtiAciklamasi = e.Item.FindControl("ltrlHastalikBelirtiAciklamasi") as Literal;
+            Literal ltrlHastalikSistemAciklamasi = e.Item.FindControl("ltrlHastalikSistemAciklamasi") as Literal;
+
+            ltrlImage.Text = "<img src=\"img/hastalik" + drData["HastalikKodu"].ToString() + ".png\" alt=\"\">";
+            ltrlYuzde.Text = "<div class=\"progress-bar color-1\"" +
+                            " role=\"progressbar\" style=\"width: " + drData["Yuzde"].ToString() + "%\" aria-valuenow=\"" + drData["Yuzde"].ToString() + "\" aria-valuemin=\"0\"" +
+                            " aria-valuemax=\"100\">%" + drData["Yuzde"].ToString() + "</div>";
+
+            ltrlHastalikAciklama.Text = drData["HastalikAciklamasi"].ToString();
+            ltrlHastalikBelirtiAciklamasi.Text = drData["HastalikBelirtiAciklamasi"].ToString();
+            ltrlHastalikSistemAciklamasi.Text = drData["Aciklama"].ToString();
         }
     }
 }

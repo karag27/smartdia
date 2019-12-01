@@ -37,12 +37,12 @@ public static class clsUtilities
         string[] sCumleAyiranNoktalamaIsaretleri = { ".", ":", ";" };
         foreach (clsKelime CumleAyraci in CumleAyraclari)
         {
-            sParagraf.Replace(" " + CumleAyraci.sAdi + " ", "#");
+            sParagraf = sParagraf.Replace(" " + CumleAyraci.sAdi + " ", "#");
         }
 
         foreach (string sCumleAyiranNoktalamaIsareti in sCumleAyiranNoktalamaIsaretleri)
         {
-            sParagraf.Replace(sCumleAyiranNoktalamaIsareti, "#");
+            sParagraf = sParagraf.Replace(sCumleAyiranNoktalamaIsareti, "#");
         }
 
         sCumleler = sParagraf.Split('#');
@@ -56,6 +56,7 @@ public static class clsUtilities
             {
                 Cumle.KelimeEkle(sKelime);
             }
+            Cumle.KelimeGrubuOlustur();
             Cumleler.Add(Cumle);
         }
 

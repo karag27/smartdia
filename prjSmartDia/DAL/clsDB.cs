@@ -18,10 +18,30 @@ public class clsDB
         SQLiteCommand cmd;
 
         con = new SQLiteConnection(sConnectionString);
+        con.Open();
         cmd = new SQLiteCommand(con);
         cmd.CommandText = sQuery;
         cmd.ExecuteNonQuery();
         con.Close();
+    }
+
+    public int RunQueryReturnID(string sQuery, string sTableName)
+    {
+        DataTable dtData;
+        SQLiteConnection con;
+        SQLiteCommand cmd;
+
+        con = new SQLiteConnection(sConnectionString);
+        con.Open();
+        cmd = new SQLiteCommand(con);
+        cmd.CommandText = sQuery;
+        cmd.ExecuteNonQuery();
+        con.Close();
+
+        sQuery = "SELECT Kodu FROM " + sTableName + " ORDER BY Kodu DESC LIMIT 1";
+        dtData = RunQueryReturnDataTable(sQuery);
+
+        return int.Parse(dtData.Rows[0][0].ToString());
     }
 
     public DataTable RunQueryReturnDataTable(string sQuery)
@@ -32,6 +52,7 @@ public class clsDB
         DataTable dtData = new DataTable("Data");
 
         con = new SQLiteConnection(sConnectionString);
+        con.Open();
         cmd = new SQLiteCommand(con);
         adap = new SQLiteDataAdapter(cmd);
         cmd.CommandText = sQuery;
@@ -88,7 +109,7 @@ public class clsDB
         dtData = RunQueryReturnDataTable(sQuery);
         return dtData;
     }
-    
+
     public DataTable GetTeshis(string sKosul)
     {
         string sQuery = "";
@@ -103,5 +124,56 @@ public class clsDB
         dtData = RunQueryReturnDataTable(sQuery);
         return dtData;
     }
+    
+    public DataTable GetTalepler(int iTalepKodu)
+    {
+        string sQuery = "";
+        DataTable dtData = null;
+        sQuery = "SELECT * FROM tblTalepler WHERE Kodu = " + iTalepKodu.ToString();
+        dtData = RunQueryReturnDataTable(sQuery);
+        return dtData;
+    }
 
+    public DataTable GetTalepTeshisleri(int iTalepKodu)
+    {
+        string sQuery = "";
+        DataTable dtData = null;
+        sQuery = "SELECT T.*, H.Adi AS HastalikAdi, H.Aciklama AS HastalikAciklamasi, " +
+                 " H.BelirtiAciklamasi AS HastalikBelirtiAciklamasi FROM tblTeshisler T " +
+                 " INNER JOIN tblHastaliklar H ON T.HastalikKodu = H.Kodu WHERE TalepKodu = " + iTalepKodu.ToString();
+        dtData = RunQueryReturnDataTable(sQuery);
+        return dtData;
+    }
+
+    public int SaveTalep(string sAdi, string sSoyadi, string sEmail, string sAciklama)
+    {
+        string sQuery = "";
+        sQuery = " INSERT INTO tblTalepler (Kodu,Adi,Soyadi,MailAdresi,Aciklama,TalepTarihi) VALUES (";
+        sQuery = sQuery + GetNextID("tblTalepler").ToString() + ",";
+        sQuery = sQuery + "'" + sAdi + "','" + sSoyadi + "','" + sEmail + "','" + sAciklama + "'";
+        sQuery = sQuery + ",date('now')) ";
+        return RunQueryReturnID(sQuery, "tblTalepler");
+    }
+
+    public int SaveTeshis(int iTalepKodu, int iHastalikKodu, int iYuzde, string sAciklama)
+    {
+        string sQuery = "";
+        sQuery = " INSERT INTO tblTeshisler (Kodu,TalepKodu,HastalikKodu,Yuzde,Aciklama) VALUES (";
+        sQuery = sQuery + GetNextID("tblTeshisler").ToString() + ",";
+        sQuery = sQuery + "" + iTalepKodu.ToString() + "," + iHastalikKodu.ToString() + "," + iYuzde.ToString() + ",'" + sAciklama + "'";
+        sQuery = sQuery + ") ";
+        return RunQueryReturnID(sQuery, "tblTeshisler");
+    }
+
+    public int GetNextID(string sTableName)
+    {
+        string sQuery = "";
+        int iID = 1;
+        DataTable dtData;
+        sQuery = "SELECT Kodu FROM " + sTableName + " ORDER BY Kodu DESC LIMIT 1";
+        dtData = RunQueryReturnDataTable(sQuery);
+        if (dtData.Rows.Count > 0)
+            iID = int.Parse(dtData.Rows[0][0].ToString()) + 1;
+        return iID;
+    }
 }

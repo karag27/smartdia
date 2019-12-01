@@ -7,18 +7,18 @@
                 <h3 class="mb-30 title_color">Hasta Şikayet Formu</h3>
                 <div id="divForm">
                     <div class="mt-10" style="border: solid 1px #aaa;">
-                        <asp:TextBox ID="txtAdi" name="first_name" placeholder="Adınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adınız'" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtAdi" placeholder="Adınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adınız'" runat="server"></asp:TextBox>
                     </div>
                     <div class="mt-10" style="border: solid 1px #aaa;">
-                        <asp:TextBox ID="txtSoyadi" name="last_name" placeholder="Soyadınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyadınız'" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtSoyadi" placeholder="Soyadınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyadınız'" runat="server"></asp:TextBox>
                     </div>
                     <div class="mt-10" style="border: solid 1px #aaa;">
-                        <asp:TextBox ID="txtEmail" name="EMAIL" placeholder="Mail adresiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mail adresiniz'" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" placeholder="Mail adresiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mail adresiniz'" runat="server"></asp:TextBox>
                     </div>
 
                     <div class="mt-10" style="border: solid 1px #aaa; margin-bottom: 20px;">
 
-                        <textarea id="txtSikayet" placeholder="Şikayetiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'" cols="20" rows="7"></textarea>
+                        <asp:TextBox ID="txtAciklama" runat="server" placeholder="Şikayetiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'" cols="20" rows="7" TextMode="MultiLine"></asp:TextBox>
                     </div>
                     <asp:LinkButton ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Tespit et" OnClick="btnTespit_Click"></asp:LinkButton>
 
