@@ -11,7 +11,7 @@
                     </div>
                     <h4>Vertigo</h4>
                 </div>
-                Başarı oranı
+                Tahmin yüzdesi
                         <div class="percentage">
                             <div class="progress">
                                 <div class="progress-bar color-1" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"

@@ -94,7 +94,7 @@
     <Content Include="img\banner\banner-map.png" />
     <Content Include="img\banner\banner.jpg" />
     <Content Include="img\banner\home-banner.jpg" />
-    <Content Include="img\Bel.png" />
+    <Content Include="img\hastalik10.png" />
     <Content Include="img\blog\add.jpg" />
     <Content Include="img\blog\author.png" />
     <Content Include="img\blog\c1.jpg" />
@@ -123,8 +123,9 @@
     <Content Include="img\blog\post-img1.jpg" />
     <Content Include="img\blog\post-img2.jpg" />
     <Content Include="img\blog\prev.jpg" />
-    <Content Include="img\burun.png" />
-    <Content Include="img\Böbrek.png" />
+    <Content Include="img\hastalik11.png" />
+    <Content Include="img\hastalik2.png" />
+    <Content Include="img\hastalik7.png" />
     <Content Include="img\counter-bg.jpg" />
     <Content Include="img\department\d-icon1.png" />
     <Content Include="img\department\d-icon2.png" />
@@ -132,8 +133,8 @@
     <Content Include="img\department\d-icon4.png" />
     <Content Include="img\department\d-icon5.png" />
     <Content Include="img\department\d-icon6.png" />
-    <Content Include="img\depresyon.png" />
-    <Content Include="img\Dismenore.png" />
+    <Content Include="img\hastalik8.png" />
+    <Content Include="img\hastalik9.png" />
     <Content Include="img\elements\a.jpg" />
     <Content Include="img\elements\a2.jpg" />
     <Content Include="img\elements\d.jpg" />
@@ -166,7 +167,7 @@
     <Content Include="img\features\icon2.png" />
     <Content Include="img\features\icon3.png" />
     <Content Include="img\footer-bg.jpg" />
-    <Content Include="img\idrar.png" />
+    <Content Include="img\hastalik6.png" />
     <Content Include="img\instagram\Image-01.jpg" />
     <Content Include="img\instagram\Image-02.jpg" />
     <Content Include="img\instagram\Image-03.jpg" />
@@ -175,12 +176,12 @@
     <Content Include="img\instagram\Image-06.jpg" />
     <Content Include="img\instagram\Image-07.jpg" />
     <Content Include="img\instagram\Image-08.jpg" />
-    <Content Include="img\kabız.png" />
-    <Content Include="img\Kulak.png" />
+    <Content Include="img\hastalik5.png" />
+    <Content Include="img\hastalik1.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\logo2.jpg" />
     <Content Include="img\map-bg.png" />
-    <Content Include="img\mide.png" />
+    <Content Include="img\hastalik3.png" />
     <Content Include="img\recent-blog\blog1.jpg" />
     <Content Include="img\recent-blog\blog2.jpg" />
     <Content Include="img\recent-blog\blog3.jpg" />
@@ -188,7 +189,7 @@
     <Content Include="img\team\member2.png" />
     <Content Include="img\team\member3.png" />
     <Content Include="img\team\member4.png" />
-    <Content Include="img\Ülser.png" />
+    <Content Include="img\hastalik4.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
     <Content Include="js\gmaps.min.js" />

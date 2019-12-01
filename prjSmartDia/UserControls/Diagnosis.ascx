@@ -19,7 +19,7 @@
 
                         <textarea id="txtSikayet" placeholder="Şikayetiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'" cols="20" rows="7"></textarea>
                     </div>
-                    <asp:Button ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Tespit et" OnClick="btnTespit_Click" />
+                    <asp:Button ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Teşhis et" OnClick="btnTespit_Click" />
 
                 </div>
             </div>

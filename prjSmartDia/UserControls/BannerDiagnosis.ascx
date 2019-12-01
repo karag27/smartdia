@@ -5,7 +5,7 @@
             <div class="overlay bg-parallax"></div>
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>HASTALIK TESPİT</h2>
+                    <h2>HASTALIK TEŞHİS</h2>
                 </div>
             </div>
         </div>
