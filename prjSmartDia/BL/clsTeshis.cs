@@ -4,16 +4,24 @@ using System.Linq;
 using System.Web;
 
 
-public class clsTeshis
+public class clsTeshis : clsHastalik;
 {
-    clsHastalik _Hastalik = new clsHastalik();
     string sBelirtiKodlari = "";
     string sAyrac = "|";
-    
-    public clsHastalik Hastalik
+    int _iSayi = 0;
+    int _iYuzde = 0;
+    int _iEsikDeger = 50;
+
+    public int iSayi
     {
-        get { return _Hastalik; }
-        set { _Hastalik = value; }
+        get { return _iSayi; }
+        set { _iSayi = value; }
+    }
+
+    public int iYuzde
+    {
+        get { return _iYuzde; }
+        set { _iYuzde = value; }
     }
 
     public void BelirtiEkle(int iBelirtiKodu)

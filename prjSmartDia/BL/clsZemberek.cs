@@ -7,18 +7,18 @@ using net.zemberek.yapi;
 using net.zemberek.tr.yapi;
 using net.zemberek.yapi.ek;
 
-public class clsZemberek
+public static class clsZemberek
 {
-    Zemberek zZemberek = new Zemberek(new TurkiyeTurkcesi());
-    private string sKelime;
+    static Zemberek zZemberek = new Zemberek(new TurkiyeTurkcesi());
+    private static string sKelime;
 
-    public string _Kelime
+    public static string _Kelime
     {
         get { return sKelime; }
         set { sKelime = value; }
     }
 
-    public bool EkKontrol(Ek ek)
+    public static bool EkKontrol(Ek ek)
     {
         bool bKabul = true;
         if (
@@ -87,7 +87,7 @@ public class clsZemberek
         return bKabul;
     }
 
-    public Kelime[] Cozumle(string sKelime)
+    public static Kelime[] Cozumle(string sKelime)
     {       
         Kelime[] cozumler = zZemberek.kelimeCozumle(sKelime);
         if (cozumler.Length == 0)
@@ -97,7 +97,7 @@ public class clsZemberek
         return cozumler;
     }
 
-    public List<Kok> KokGetir(string sKelime)
+    public static List<Kok> KokGetir(string sKelime)
     {
         List<Kok> kokler = new List<Kok>();
         Kelime[] cozumler = Cozumle(sKelime);
@@ -105,12 +105,13 @@ public class clsZemberek
         foreach (Kelime cozum in cozumler)
         {
             kokler.Add(cozum.kok());
+            break;
         }
 
         return kokler;
     }
 
-    public List<Ek> EkGetir(Kelime kKelime)
+    public static List<Ek> EkGetir(Kelime kKelime)
     {
         List<Ek> ekler = new List<Ek>();
 
@@ -127,7 +128,7 @@ public class clsZemberek
         return ekler;
     }
 
-    public List<string> KelimelerGetir(string sKelime)
+    public static List<string> KelimelerGetir(string sKelime)
     {
         Kok kok;
         List<Ek> ekler;
@@ -149,11 +150,5 @@ public class clsZemberek
 
         return sKelimeler;
     }
-
-    //public List< EslesenKelimeler()
-    //{
-
-
-
-    //}
+    
 }
