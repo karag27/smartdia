@@ -4,34 +4,34 @@
         <div class="row">
             <div class="col-md-6">
                 <h3 class="mb-30 title_color">Hasta Şikayet Formu</h3>
-                <form action="#">
-                    <div class="mt-10">
-                        <input type="text" name="first_name" placeholder="Adınız" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adınız'"
-                            required class="single-input">
+                <div id="divForm">
+                    <div class="mt-10" style="border: solid 1px #aaa;">
+                        <asp:TextBox ID="txtAdi" name="first_name" placeholder="Adınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adınız'" runat="server"></asp:TextBox>
                     </div>
-                    <div class="mt-10">
-                        <input type="text" name="last_name" placeholder="Soyadınız" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyadınız'"
-                            required class="single-input">
+                    <div class="mt-10" style="border: solid 1px #aaa;">
+                        <asp:TextBox ID="txtSoyadi" name="last_name" placeholder="Soyadınız" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Soyadınız'" runat="server"></asp:TextBox>
                     </div>
-                    <div class="mt-10">
-                        <input type="email" name="EMAIL" placeholder="Mail adresiniz" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mail adresiniz'"
-                            required class="single-input">
+                    <div class="mt-10" style="border: solid 1px #aaa;">
+                        <asp:TextBox ID="txtEmail" name="EMAIL" placeholder="Mail adresiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mail adresiniz'" runat="server"></asp:TextBox>
                     </div>
 
-                    <div class="mt-10">
-                        <textarea class="single-textarea" placeholder="Şikayetiniz" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'"
-                            required></textarea>
+                    <div class="mt-10" style="border: solid 1px #aaa;margin-bottom: 20px;">
+
+                        <textarea id="txtSikayet" placeholder="Şikayetiniz" required class="single-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Şikayetiniz'" cols="20" rows="7"></textarea>
                     </div>
-                    <a href="#" class="primary-btn text-uppercase">Tespit et</a>
-                </form>
+                    <asp:Button ID="btnTespit" class="primary-btn text-uppercase" runat="server" Text="Tespit et" OnClick="btnTespit_Click" />
+
+                </div>
             </div>
             <div class="col-md-6">
                 <h3 class="mb-30 title_color">Yazım Kuralları</h3>
                 <blockquote class="generic-blockquote">
                     <ul>
 
-                        <li>Lütfen cinsiyetinizi giriniz</li></br>
-                        <li>En az 200 karakter</li></br>
+                        <li>Lütfen cinsiyetinizi giriniz</li>
+                        </br>
+                        <li>En az 200 karakter</li>
+                        </br>
                         <li>Şikayetlerinizi en açık şekilde yazınız.</li>
                     </ul>
                 </blockquote>

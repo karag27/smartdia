@@ -13,5 +13,10 @@ namespace prjSmartDia.UserControls
         {
 
         }
+
+        protected void btnTespit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
