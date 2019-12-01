@@ -35,14 +35,16 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <h3 class="mb-30 title_color">Yazım Kuralları</h3>
+                            <h3 class="mb-30 title_color">Şikayet Yazım Önerileri</h3>
                             <blockquote class="generic-blockquote">
                                 <ul>
-                                    <li>Lütfen cinsiyetinizi giriniz</li>
+                                    <li>En doğru teşhisin yapılması için aşağıdaki konulara dikkat etmeniz önerilir:</li>
                                     </br>
-                        <li>En az 200 karakter</li>
+                        <li>Mümkün olan en detaylı şekilde şikayetinizi girdiğinizden emin olunuz.</li>
                                     </br>
-                        <li>Şikayetlerinizi en açık şekilde yazınız.</li>
+                        <li>En az 200 karakter kullanmanız tavsiye edilir.</li>
+                                    </br>
+                        <li>Şikayetlerinizi yalın bir dil ile yazmalısınız.</li>
                                 </ul>
                             </blockquote>
                         </div>
@@ -53,7 +55,6 @@
             </div>
         </ContentTemplate>
         <Triggers>
-            
         </Triggers>
     </asp:UpdatePanel>
 </asp:Content>

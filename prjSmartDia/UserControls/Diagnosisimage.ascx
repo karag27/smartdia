@@ -11,13 +11,13 @@
                         <h3 class="mb-30 title_color">
                             <asp:Literal runat="server" ID="ltrlHastalikAdi">
 
-                                </asp:Literal>
+                            </asp:Literal>
                         </h3>
                         <div class="single_department">
                             <div class="dpmt-thumb">
                                 <asp:Literal runat="server" ID="ltrlImage">
 
-                                </asp:Literal>  
+                                </asp:Literal>
                             </div>
                             <h4></h4>
                         </div>
@@ -26,29 +26,29 @@
                             <div class="progress">
                                 <asp:Literal runat="server" ID="ltrlYuzde">
 
-                                </asp:Literal>                                
+                                </asp:Literal>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-9 mt-sm-20 left-align-p">
                         <h3 class="mb-30 title_color">DETAYLAR</h3>
-                        <p>
+                        <p style="text-align: justify;">
                             <asp:Literal runat="server" ID="ltrlHastalikAciklama">
 
-                                </asp:Literal> 
+                            </asp:Literal>
                         </p>
                         <h3 class="mb-30 title_color">GENEL BELİRTİLER</h3>
-                        <p>
+                        <p style="text-align: justify;">
                             <asp:Literal runat="server" ID="ltrlHastalikBelirtiAciklamasi">
 
-                                </asp:Literal> 
+                            </asp:Literal>
                         </p>
-                         <h3 class="mb-30 title_color">SİSTEM YORUMU</h3>
-                        <p>
+                        <h3 class="mb-30 title_color">SİSTEM YORUMU</h3>
+                        <p style="text-align: justify;">
                             <asp:Literal runat="server" ID="ltrlHastalikSistemAciklamasi">
 
-                                </asp:Literal> 
+                            </asp:Literal>
                         </p>
                     </div>
                 </div>

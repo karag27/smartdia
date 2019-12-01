@@ -118,7 +118,6 @@ public static class clsKernel
 
         sHastaAciklama = drTalep["Aciklama"].ToString();
 
-
         _HastaAciklamaCumleleri = clsUtilities.CumlelereBol(sHastaAciklama, _CumleAyraclari);
         sTeshisKosul = clsUtilities.sTeshisKosulOlustur(_HastaAciklamaCumleleri);
         dtTeshisler = DB.GetTeshis(sTeshisKosul);
@@ -132,7 +131,12 @@ public static class clsKernel
             Teshis.sAdi = drTeshis["Adi"].ToString();
             Teshis.iYuzde = int.Parse(Math.Round(double.Parse(drTeshis["Sayi"].ToString())*100,0).ToString());
             iToplamSayi += Teshis.iSayi;
-            DB.SaveTeshis(iTalepID, Teshis.iKodu, Teshis.iYuzde, sTeshisAciklama);
+
+            sTeshisAciklama = "Yaptığınız açıklamaya göre <strong>%" + Teshis.iYuzde.ToString() + "</strong> olasılıkla <strong>" + Teshis.sAdi + "</strong> hastalığına sahipsiniz. ";
+            sTeshisAciklama = sTeshisAciklama + " En kısa zamanda gerekli tahlil ve kontrollerin yapılabilmesi için Hekiminize danışmanız tavsiye edilir. ";
+            sTeshisAciklama = sTeshisAciklama + " Burada verilen sonuçlar bilgilendirme amaçlı olup, bu uygulamada yer alan hiçbir ifade hekimlik hizmeti sunmayı veya ";
+            sTeshisAciklama = sTeshisAciklama + " hekim-hasta ilişkisi tesis etmeyi amaçlamamaktadır.";
+                DB.SaveTeshis(iTalepID, Teshis.iKodu, Teshis.iYuzde, sTeshisAciklama);
             _Teshisler.Add(Teshis);
         }
 

@@ -88,6 +88,8 @@
     <Content Include="dll\NZemberek.dll" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\17384.jpg" />
+    <Content Include="img\19747.jpg" />
     <Content Include="img\about-bg.jpg" />
     <Content Include="img\about-bg2.png" />
     <Content Include="img\banner\banner-2.jpg" />

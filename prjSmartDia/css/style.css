@@ -418,11 +418,12 @@ button:focus {
 /* Home Banner Area css
 ============================================================================================ */
 .home_banner_area {
-  z-index: 1;
-  min-height: 900px;
-  display: flex;
-  background: url(../img/banner/home-banner.jpg) no-repeat scroll center center;
-  background-size: cover; }
+    z-index: 1;
+    min-height: 900px;
+    display: flex;
+    background: url(../img/19747.jpg) no-repeat scroll center center;
+    background-size: cover;
+}
   .home_banner_area .banner_inner {
     width: 100%;
     display: flex; }

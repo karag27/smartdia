@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="prjSmartDia.UserControls.Footer" %>
 	<!--================ Start footer Area  =================-->
-	<footer class="footer-area section-gap">
-		<div class="footer_top section_gap">
+	<footer class="footer-area section-gap" style="padding:20px;">
+		<div class="footer_top section_gap" style="padding:20px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3  col-md-6 col-sm-6">

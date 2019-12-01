@@ -11,7 +11,7 @@
 							<h4>ANINDA TEŞHİS</h4>
 						</div>
 						<div class="feature_content">
-							<p>SmartDia ile artık sebebinizi bilmediğiniz hastalıklarınız da, şikayetinizi açık bir dille belirtmeniz halinde anında son bulacaktır. SmartDia akıllı doktorunuz !</p>
+							<p>SmartDia akıllı teşhis uygulaması ile rahatsızlıklarını anında sorgulayabilir ve olası hastalıklarınızı öğrenebilirsiniz.</p>
 					
 						</div>
 					</div>
@@ -24,7 +24,7 @@
 							<h4>TEŞHİS BİLGİSİ</h4>
 						</div>
 						<div class="feature_content">
-							<p>Hastalığınız hakkında ki tüm detayları artık smartDia ile öğrenebileceksiniz. SmartDia sizlere kolay bir arayüzde hastalığınızı öğrenmenize yardımcı olacaktır.</p>
+							<p>SmartDia akıllı sağlık asistanı, olası hastalığınızın belirtileri hakkında bilgi sahibi olmanızı sağlar ve önceden önlem almanıza yardımcı olur.</p>
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 							<h4>YAPMANIZ GEREKEN</h4>
 						</div>
 						<div class="feature_content">
-							<p>Tek yapmanız gereken SmartDia'nın istediği formu doldurmak ve tüm detayları ayrıntılarıyla ve düzgün bir şekilde vermektir. Sizlerle beraber keşfeden SmartDia ya bu süreç de yardımcı olacağınıza inanıyoruz.</p>
+							<p>Şimdi tek yapmanız gereken SmartDia formu doldurarak şikayetinizi bildirmek. Forma ulaşmak için <a href="wfDiagnosis.aspx">tıklayınız.</a></p>
 
 						</div>
 					</div>
