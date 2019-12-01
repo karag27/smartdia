@@ -22,21 +22,57 @@ namespace prjSmartDia {
         protected global::prjSmartDia.UserControls.BannerDiagnosis BannerDiagnosis;
         
         /// <summary>
-        /// Diagnosis control.
+        /// upPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::prjSmartDia.UserControls.Diagnosis Diagnosis;
+        protected global::System.Web.UI.UpdatePanel upPanel;
         
         /// <summary>
-        /// Diagnosisimage control.
+        /// txtAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::prjSmartDia.UserControls.Diagnosisimage Diagnosisimage;
+        protected global::System.Web.UI.WebControls.TextBox txtAdi;
+        
+        /// <summary>
+        /// txtSoyadi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSoyadi;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// txtAciklama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAciklama;
+        
+        /// <summary>
+        /// btnTespit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnTespit;
     }
 }

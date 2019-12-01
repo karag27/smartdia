@@ -88,7 +88,7 @@ public static class clsZemberek
     }
 
     public static Kelime[] Cozumle(string sKelime)
-    {       
+    {
         Kelime[] cozumler = zZemberek.kelimeCozumle(sKelime);
         if (cozumler.Length == 0)
         {
@@ -102,12 +102,14 @@ public static class clsZemberek
         List<Kok> kokler = new List<Kok>();
         Kelime[] cozumler = Cozumle(sKelime);
 
-        foreach (Kelime cozum in cozumler)
+        if (cozumler != null)
         {
-            kokler.Add(cozum.kok());
-            break;
+            foreach (Kelime cozum in cozumler)
+            {
+                kokler.Add(cozum.kok());
+                break;
+            }
         }
-
         return kokler;
     }
 
@@ -141,7 +143,7 @@ public static class clsZemberek
             kok = cozum.kok();
             ekler = EkGetir(cozum);
             sKelimeler.Add(kok.icerik());
-            if (ekler.Count>0)
+            if (ekler.Count > 0)
             {
                 sYeniKelime = zZemberek.kelimeUret(kok, ekler);
                 sKelimeler.Add(sYeniKelime);
@@ -150,5 +152,5 @@ public static class clsZemberek
 
         return sKelimeler;
     }
-    
+
 }

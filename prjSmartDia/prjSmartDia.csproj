@@ -205,6 +205,7 @@
     <Content Include="UserControls\Banner2.ascx" />
     <Content Include="UserControls\BannerContent.ascx" />
     <Content Include="UserControls\BannerDiagnosis.ascx" />
+    <Content Include="UserControls\BannerDiagnosisResult.ascx" />
     <Content Include="UserControls\BlockQuotes.ascx" />
     <Content Include="UserControls\Contact.ascx" />
     <Content Include="UserControls\Detail1.ascx" />
@@ -250,6 +251,7 @@
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
     <Content Include="Web.config" />
+    <Content Include="wfDiagnosisResult.aspx" />
     <Content Include="wfAbout.aspx" />
     <Content Include="wfContact.aspx" />
     <Content Include="wfDiagnosis.aspx" />
@@ -304,6 +306,13 @@
     </Compile>
     <Compile Include="UserControls\BannerDiagnosis.ascx.designer.cs">
       <DependentUpon>BannerDiagnosis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BannerDiagnosisResult.ascx.cs">
+      <DependentUpon>BannerDiagnosisResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BannerDiagnosisResult.ascx.designer.cs">
+      <DependentUpon>BannerDiagnosisResult.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\BlockQuotes.ascx.cs">
       <DependentUpon>BlockQuotes.ascx</DependentUpon>
@@ -409,6 +418,13 @@
     </Compile>
     <Compile Include="UserControls\TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wfDiagnosisResult.aspx.cs">
+      <DependentUpon>wfDiagnosisResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfDiagnosisResult.aspx.designer.cs">
+      <DependentUpon>wfDiagnosisResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfAbout.aspx.cs">
       <DependentUpon>wfAbout.aspx</DependentUpon>

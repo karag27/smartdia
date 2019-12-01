@@ -21,6 +21,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="ScriptManager"></asp:ScriptManager>
 
         <!--================ Start Header Menu Area =================-->
         <header class="header_area">

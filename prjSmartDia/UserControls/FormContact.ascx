@@ -21,8 +21,7 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm"
-                        novalidate="novalidate">
+                    <div class="row contact_form">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Adınız">
@@ -42,7 +41,7 @@
                         <div class="col-md-12 text-right">
                             <button type="submit" value="submit" class="primary-btn text-uppercase">Send Message</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             </div>

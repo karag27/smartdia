@@ -29,8 +29,7 @@
 							<h4 class="text-white">Yeni haberler</h4>
 							<p>SmartDia destek için iletişim sağlayabilirsiniz.</p>
 							<div class="d-flex flex-row" id="mc_embed_signup">
-								<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								 method="get">
+								<div class="navbar-form">
 									<div class="input-group add-on">
 										<input class="form-control" name="EMAIL" placeholder="Email adresiniz" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
 										 required="" type="email">
@@ -44,7 +43,7 @@
 										</div>
 									</div>
 									<div class="info mt-20"></div>
-								</form>
+								</div>
 
 							</div>
 						</div>

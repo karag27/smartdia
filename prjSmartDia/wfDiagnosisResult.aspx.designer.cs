@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace prjSmartDia.UserControls {
+namespace prjSmartDia {
     
     
-    public partial class Diagnosisimage {
+    public partial class WebForm3 {
         
         /// <summary>
-        /// rptrTeshisler control.
+        /// BannerDiagnosisResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrTeshisler;
+        protected global::prjSmartDia.UserControls.BannerDiagnosisResult BannerDiagnosisResult;
+        
+        /// <summary>
+        /// DiagnosisResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::prjSmartDia.UserControls.Diagnosisimage DiagnosisResult;
     }
 }

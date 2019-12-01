@@ -104,14 +104,21 @@ public static class clsKernel
         }
     }
 
-    public static void Process()
+    public static void Process(int iTalepID)
     {
         clsDB DB = new clsDB();
         clsTeshis Teshis;
-        string sTeshisKosul = "";
+        string sTeshisKosul = "",sTeshisAciklama="";
         int i = 0, iToplamSayi = 0;
-        DataTable dtTeshisler;
-        DataRow drTeshis;
+        DataTable dtTeshisler,dtTalepler;
+        DataRow drTeshis,drTalep;
+
+        dtTalepler = DB.GetTalepler(iTalepID);
+        drTalep = dtTalepler.Rows[0];
+
+        sHastaAciklama = drTalep["Aciklama"].ToString();
+
+
         _HastaAciklamaCumleleri = clsUtilities.CumlelereBol(sHastaAciklama, _CumleAyraclari);
         sTeshisKosul = clsUtilities.sTeshisKosulOlustur(_HastaAciklamaCumleleri);
         dtTeshisler = DB.GetTeshis(sTeshisKosul);
@@ -123,14 +130,16 @@ public static class clsKernel
             drTeshis = dtTeshisler.Rows[i];
             Teshis.iKodu = (int)drTeshis["Kodu"];
             Teshis.sAdi = drTeshis["Adi"].ToString();
-            Teshis.iSayi = (int)drTeshis["Sayi"];
+            Teshis.iSayi = int.Parse(drTeshis["Sayi"].ToString());
             iToplamSayi += Teshis.iSayi;
             _Teshisler.Add(Teshis);
         }
 
         for (i = 0; i < dtTeshisler.Rows.Count; i++)
         {
-            _Teshisler[i].iYuzde = int.Parse(Math.Round(_Teshisler[i].iSayi * 1.00 / iToplamSayi,0).ToString());
+            _Teshisler[i].iYuzde = int.Parse(Math.Round(_Teshisler[i].iSayi * 100.00 / iToplamSayi,0).ToString());
+
+            DB.SaveTeshis(iTalepID, _Teshisler[i].iKodu, _Teshisler[i].iYuzde, sTeshisAciklama);
         }
     }
 
